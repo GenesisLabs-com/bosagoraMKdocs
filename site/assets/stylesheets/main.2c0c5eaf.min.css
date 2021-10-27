@@ -2300,7 +2300,7 @@ html .md-footer-meta.md-typeset a:hover {
   top: 2.4rem;
   flex-shrink: 0;
   align-self: flex-start;
-  width: 12.1rem;
+  width: 50%;
   padding: 1.2rem 0;
 }
 @media print {
@@ -2368,9 +2368,9 @@ html .md-footer-meta.md-typeset a:hover {
   .no-js .md-sidebar--secondary {
     height: auto;
   }
-  .md-sidebar--secondary:not([hidden]) {
+  /* .md-sidebar--secondary:not([hidden]) {
     display: block;
-  }
+  } */
   .md-sidebar--secondary .md-sidebar__scrollwrap {
     touch-action: pan-y;
   }
