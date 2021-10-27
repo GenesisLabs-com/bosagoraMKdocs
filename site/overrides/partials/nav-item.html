@@ -39,6 +39,7 @@ features ) %} {% set class = class ~ " md-nav__item--section" %} {% endif %}
   <!-- Active checkbox expands items contained within nested section -->
   {% set checked = "checked" if nav_item.active %} {% if "navigation.expand" in
   features and not checked %}
+
   <input
     class="md-nav__toggle md-toggle"
     data-md-toggle="{{ path }}"
