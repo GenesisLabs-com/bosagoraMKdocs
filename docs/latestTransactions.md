@@ -26,6 +26,8 @@ Returns Latest transactions of the ledger.
 <p id="showResult"></p>
 | Parameter | Explanation  | Example                              |
 | --------- | ------------ | ------------------------------------ |
+| page      | page number | 1 |
+| page size      | Number of records in a page | 6 |
 
 
 Example Response JSON:<br/>

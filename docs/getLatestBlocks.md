@@ -28,7 +28,7 @@ Returns Latest blocks of the ledger.
 </script>
 <p id="showResult"></p><br/>
 | Query String | Explanation    | Example                            |
-| --------- | ------------ | ------------------------------------ |
+| --------- | ------------ | ------------------------------------ | 
 | page      | page number | 1 |
 | page size      | Number of records in a page | 6 |
 
