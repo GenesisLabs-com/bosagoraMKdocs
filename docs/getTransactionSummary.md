@@ -1,6 +1,6 @@
 ###### Endpoint
 
-    ‘https://boascan.io/gettransactionsummary?transaction=0x00a438...
+    https://boascan.io/gettransactionsummary?transaction=0x00a438...
 
 HTTP Method: **GET**
 

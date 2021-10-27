@@ -1,6 +1,6 @@
 ###### Endpoint
 
-    ‘https://boascan.io/getblocksummary?block=0x0a8….'
+    https://boascan.io/getblocksummary?block=0x0a8…
 
 HTTP Method: **GET**
 

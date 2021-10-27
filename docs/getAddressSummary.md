@@ -1,6 +1,6 @@
 ###### Endpoint
 
-    ‘https://boascan.io/getaddresssummary?address=GHSDNF……'
+    https://boascan.io/getaddresssummary?address=GHSDNF…
 
 HTTP Method: **GET**
 

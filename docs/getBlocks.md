@@ -1,4 +1,4 @@
-Endpoint
+###### Endpoint
 
     https://boascan.io/getmaxlatestblocks
 

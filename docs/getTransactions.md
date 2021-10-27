@@ -1,6 +1,6 @@
 ###### Endpoint
 
-    ‘https://boascan.io/getmaxlatesttransactions’
+    https://boascan.io/getmaxlatesttransactions
 
 HTTP Method: **GET**
 
