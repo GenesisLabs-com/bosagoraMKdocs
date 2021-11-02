@@ -8,14 +8,14 @@ Return the block height corresponding to the block creation time
 <button class="md-button" onclick="tryNow()">Try Now</button>
 
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/block_height_at/${document.getElementById("time").value || "1631686328"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/block_height_at/${document.getElementById("time").value || "1631686328"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/block_height_at/${document.getElementById("time").value || "1631686328"}`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/block_height_at/${document.getElementById("time").value || "1631686328"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res[0])
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/block_height_at/${document.getElementById("time").value || "1631686328"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/block_height_at/${document.getElementById("time").value || "1631686328"}`
                 })
         }).catch((err) => {
             console.log(err)

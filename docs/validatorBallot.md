@@ -6,14 +6,14 @@ Returns Ballot of the validator
 <input class="md-input" placeholder="Enter Address" id="address" width="100"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button>
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/validator/ballot/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/validator/ballot/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/validator/ballot/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/validator/ballot/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/validator/ballot/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/validator/ballot/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}`
                 })
         }).catch((err) => {
             console.log(err)

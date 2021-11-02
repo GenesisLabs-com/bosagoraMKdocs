@@ -7,14 +7,14 @@ Returns a pending transaction by the transaction hash.
 <input class="md-input" placeholder="Enter Hash" id="hash" width="100"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button>
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/transaction/pending/${document.getElementById("hash").value || "0xec5ac9c163072644abe80e8139c45e986626811f5b96a382d3cc812a32878a710f874e7fb8ac2910babdc06c24bcfe44de61beb1723179400fcdd08b2aa34434"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transaction/pending/${document.getElementById("hash").value || "0xec5ac9c163072644abe80e8139c45e986626811f5b96a382d3cc812a32878a710f874e7fb8ac2910babdc06c24bcfe44de61beb1723179400fcdd08b2aa34434"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/transaction/pending/${document.getElementById("hash").value || "0xec5ac9c163072644abe80e8139c45e986626811f5b96a382d3cc812a32878a710f874e7fb8ac2910babdc06c24bcfe44de61beb1723179400fcdd08b2aa34434"}`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/transaction/pending/${document.getElementById("hash").value || "0xec5ac9c163072644abe80e8139c45e986626811f5b96a382d3cc812a32878a710f874e7fb8ac2910babdc06c24bcfe44de61beb1723179400fcdd08b2aa34434"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/transaction/pending/${document.getElementById("hash").value || "0xec5ac9c163072644abe80e8139c45e986626811f5b96a382d3cc812a32878a710f874e7fb8ac2910babdc06c24bcfe44de61beb1723179400fcdd08b2aa34434"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transaction/pending/${document.getElementById("hash").value || "0xec5ac9c163072644abe80e8139c45e986626811f5b96a382d3cc812a32878a710f874e7fb8ac2910babdc06c24bcfe44de61beb1723179400fcdd08b2aa34434"}`
                 })
         }).catch((err) => {
             console.log(err)

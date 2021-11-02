@@ -9,17 +9,17 @@ Returns a set of Validators based on the block height if there is a height. If h
 <input class="md-input" placeholder="Enter Limit" id="limit"></input><br/><br/> -->
 <button class="md-button" onclick="tryNow()">Try Now</button>
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/validators?page=1&limit=1`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/validators?page=1&limit=1`
    //${document.getElementById("page").value || "1"}&limit=${document.getElementById("limit").value || "1"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/validators?page=1&limit=1`)
+        fetch(`https://dev-stoa-boascan.bosagora.com/validators?page=1&limit=1`)
         //${document.getElementById("page").value || "1"}&limit=${document.getElementById("limit").value || "1"}`
         .then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/validators?page=1&limit=1`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/validators?page=1&limit=1`
                 //${document.getElementById("page").value || "1"}&limit=${document.getElementById("limit").value || "1"}`
                 })
         }).catch((err) => {

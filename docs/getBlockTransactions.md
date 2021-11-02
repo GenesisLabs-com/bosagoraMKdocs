@@ -10,19 +10,19 @@ Returns transactions of block.
 <script>
     let query
    if(document.getElementById("hash").value != "" || document.getElementById("hash").value != undefined){
-       query=`http://3.38.34.30:3836/block-transactions?hash=${document.getElementById("hash").value || "0xe928f7db6db61a3784a61f631e29e2157a8444b659ca5d782e5c6266ff09f8e5cfdd0fad939b277532cb0b4c88ba2bb5bd45ecc2cd71612ceadc0671752027cd"}`
+       query=`https://dev-stoa-boascan.bosagora.com/block-transactions?hash=${document.getElementById("hash").value || "0xe928f7db6db61a3784a61f631e29e2157a8444b659ca5d782e5c6266ff09f8e5cfdd0fad939b277532cb0b4c88ba2bb5bd45ecc2cd71612ceadc0671752027cd"}`
    }
    else{
-       query=`http://3.38.34.30:3836/block-transactions?height=${document.getElementById("height").value || "1"}` 
+       query=`https://dev-stoa-boascan.bosagora.com/block-transactions?height=${document.getElementById("height").value || "1"}` 
    }
    document.getElementById("endpoint").innerHTML = query
    function tryNow(){
        let query
    if(document.getElementById("hash").value != ""){
-       query=`http://3.38.34.30:3836/block-transactions?hash=${document.getElementById("hash").value || "0xe928f7db6db61a3784a61f631e29e2157a8444b659ca5d782e5c6266ff09f8e5cfdd0fad939b277532cb0b4c88ba2bb5bd45ecc2cd71612ceadc0671752027cd"}`
+       query=`https://dev-stoa-boascan.bosagora.com/block-transactions?hash=${document.getElementById("hash").value || "0xe928f7db6db61a3784a61f631e29e2157a8444b659ca5d782e5c6266ff09f8e5cfdd0fad939b277532cb0b4c88ba2bb5bd45ecc2cd71612ceadc0671752027cd"}`
    }
    else{
-       query=`http://3.38.34.30:3836/block-transactions?height=${document.getElementById("height").value || "1"}` 
+       query=`https://dev-stoa-boascan.bosagora.com/block-transactions?height=${document.getElementById("height").value || "1"}` 
    }
    document.getElementById("endpoint").innerHTML = query
         document.getElementById("showResult").innerHTML =""

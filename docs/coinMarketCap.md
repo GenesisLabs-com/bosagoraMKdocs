@@ -7,14 +7,14 @@ Returns Coin market cap.
 <br/>
 <button class="md-button" onclick="tryNow()">Try Now</button>
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/coinmarketcap`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/coinmarketcap`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/coinmarketcap`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/coinmarketcap`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/coinmarketcap`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/coinmarketcap`
                 })
         }).catch((err) => {
             console.log(err)

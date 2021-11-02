@@ -10,14 +10,14 @@ If height was not provided the information of the last block header is returned.
 
 <button class="md-button" onclick="tryNow()">Try Now</button>
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/wallet/blocks/header`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/wallet/blocks/header`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/wallet/blocks/header`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header`
                 })
         }).catch((err) => {
             console.log(err)

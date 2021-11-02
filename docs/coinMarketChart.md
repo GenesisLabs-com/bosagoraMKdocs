@@ -11,10 +11,10 @@ Returns BOA statistics of last 24 hours.
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/coinmarketchart`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/coinmarketchart`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/coinmarketchart`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/coinmarketchart`
                 })
         }).catch((err) => {
             console.log(err)

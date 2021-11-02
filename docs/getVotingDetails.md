@@ -9,17 +9,17 @@ HTTP Method: **GET**
 <input class="md-input" placeholder="Enter pageSize" id="pageSize"></input><br/><br/> -->
 <button class="md-button" onclick="tryNow()">Try Now</button>
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/proposal/voting_details/${document.getElementById("proposalId").value || "469008972006"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/proposal/voting_details/${document.getElementById("proposalId").value || "469008972006"}`
 //    /?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "6"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/proposal/voting_details/${document.getElementById("proposalId").value || "469008972006"}`)
+        fetch(`https://dev-stoa-boascan.bosagora.com/proposal/voting_details/${document.getElementById("proposalId").value || "469008972006"}`)
         // /?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "6"}`)
         .then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/voting_details/${document.getElementById("proposalId").value || "469008972006"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/voting_details/${document.getElementById("proposalId").value || "469008972006"}`
                 // /?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "6"}`
                 })
         }).catch((err) => {

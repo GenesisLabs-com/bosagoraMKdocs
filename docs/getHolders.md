@@ -8,14 +8,14 @@ Returns Latest transactions of the ledger.
 <br/>
 <button class="md-button" onclick="tryNow()">Try Now</button>
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/holders`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/holders`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/holders`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/holders`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/holders`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/holders`
                 })
         }).catch((err) => {
             console.log(err)

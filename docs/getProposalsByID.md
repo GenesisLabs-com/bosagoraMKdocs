@@ -7,14 +7,14 @@ Returns proposal of the ledger.
 <input class="md-input" placeholder="Enter Proposal id" id="proposalId"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button>
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/proposal/${document.getElementById("proposalId").value || "469008972006"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/proposal/${document.getElementById("proposalId").value || "469008972006"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/proposal/${document.getElementById("proposalId").value || "469008972006"}`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/proposal/${document.getElementById("proposalId").value || "469008972006"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/proposal/${document.getElementById("proposalId").value || "469008972006"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/proposal/${document.getElementById("proposalId").value || "469008972006"}`
                 })
         }).catch((err) => {
             console.log(err)

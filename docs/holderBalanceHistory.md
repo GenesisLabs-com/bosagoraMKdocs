@@ -9,14 +9,14 @@ Returns holder transaction history<br/>
 <input class="md-input" placeholder="Enter date" id="date"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button>
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/holder_balance_history/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}?filter=${document.getElementById("filter").value || "D"}&date=${document.getElementById("date").value || "1609459200"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/holder_balance_history/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}?filter=${document.getElementById("filter").value || "D"}&date=${document.getElementById("date").value || "1609459200"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`http://3.38.34.30:3836/holder_balance_history/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}?filter=${document.getElementById("filter").value || "D"}&date=${document.getElementById("date").value || "1609459200"}`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/holder_balance_history/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}?filter=${document.getElementById("filter").value || "D"}&date=${document.getElementById("date").value || "1609459200"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res[0])
-                document.getElementById("endpoint").innerHTML =`http://3.38.34.30:3836/holder_balance_history/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}?filter=${document.getElementById("filter").value || "D"}&date=${document.getElementById("date").value || "1609459200"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/holder_balance_history/${document.getElementById("address").value || "boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2"}?filter=${document.getElementById("filter").value || "D"}&date=${document.getElementById("date").value || "1609459200"}`
                 })
         }).catch((err) => {
             console.log(err)
