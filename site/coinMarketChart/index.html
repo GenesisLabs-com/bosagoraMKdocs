@@ -1,0 +1,2534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.7">
+    
+    
+<title>Bosagora Docs</title>
+
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.c772ddf0.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Header -->
+<header class="md-header" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+    <!-- Link to home -->
+    <a
+      href=".."
+      title="Bosagora"
+      class="md-header__button md-logo"
+      aria-label="Bosagora"
+      data-md-component="logo"
+    >
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Logo -->
+
+<h1>BOSAGORA</h1>
+<!-- <img
+  style="width: 100%; height: auto"
+  src="https://i.imgur.com/H1Dfq7A.png"
+  alt="logo"
+/> -->
+
+    </a>
+
+    <!-- Button to open drawer -->
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+
+    <!-- Header title -->
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <!-- <span class="md-ellipsis"> Bosagora </span> -->
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <!-- <a href="/transactions">Transactions</a> -->
+          <!-- <span class="md-ellipsis">
+             Get Coin Market Chart  - GET /coinarketchart 
+          </span> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Header options -->
+    <div class="md-header__options">
+      <!-- Switch to toggle language -->
+      
+    </div>
+
+    <!-- Button to open search modal -->
+    
+    <label class="md-header__button md-icon" for="__search">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    </label>
+
+    <!-- Search interface -->
+    <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Search interface -->
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input
+        type="text"
+        class="md-search__input"
+        name="query"
+        aria-label="Search"
+        placeholder="Search"
+        autocapitalize="off"
+        autocorrect="off"
+        autocomplete="off"
+        spellcheck="false"
+        data-md-component="search-query"
+        data-md-state="active"
+        required
+      />
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+    <!-- Repository information -->
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to configuration -->
+  
+
+<!-- Main navigation -->
+<nav
+  class="md-nav md-nav--primary"
+  aria-label="Navigation"
+  data-md-level="0"
+>
+  <!-- Site title -->
+  <label class="md-nav__title" for="__drawer">
+    <a
+      href=".."
+      title="Bosagora"
+      class="md-nav__button md-logo"
+      aria-label="Bosagora"
+      data-md-component="logo"
+    >
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Logo -->
+
+<h1>BOSAGORA</h1>
+<!-- <img
+  style="width: 100%; height: auto"
+  src="https://i.imgur.com/H1Dfq7A.png"
+  alt="logo"
+/> -->
+
+    </a>
+    <!-- Bosagora -->
+  </label>
+
+  <!-- Repository information -->
+  
+
+  <!-- Render item list -->
+  <ul class="md-nav__list" data-md-scrollfix>
+       <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href=".." class="md-nav__link">
+    Boascan Docs
+  </a>
+</li>
+     <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Determine whether to render item as a section -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+  <!-- Active checkbox expands items contained within nested section -->
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_2"
+    type="checkbox"
+    id="__nav_2"
+    
+  />
+  
+
+  <!-- Expand active pages -->
+  <label class="md-nav__link" for="__nav_2">
+    Blocks:
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav
+    class="md-nav"
+    aria-label="Blocks:"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_2">
+      <span class="md-nav__icon md-icon"></span>
+      Blocks:
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      <!-- Render nested item list -->
+       
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getLatestBlocks/" class="md-nav__link">
+    Get latest blocks - GET /latest-blocks
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getBlockHeight/" class="md-nav__link">
+    Get Block Height - GET /block_height
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../blockHeightat/" class="md-nav__link">
+    Get Block Height/:time- GET /block_height_at/:time
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../blocksummary/" class="md-nav__link">
+    Get Block Summary - GET /block-summary
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getBlockEnrollments/" class="md-nav__link">
+    Get Block Enrollments -  GET /block-enrollments
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getBlockTransactions/" class="md-nav__link">
+    Get Block Transactions -  GET /block-transactions
+  </a>
+</li>
+  
+    </ul>
+  </nav>
+</li>
+
+<!-- Currently active page -->
+     <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Determine whether to render item as a section -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+  <!-- Active checkbox expands items contained within nested section -->
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_3"
+    type="checkbox"
+    id="__nav_3"
+    
+  />
+  
+
+  <!-- Expand active pages -->
+  <label class="md-nav__link" for="__nav_3">
+    Validators:
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav
+    class="md-nav"
+    aria-label="Validators:"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_3">
+      <span class="md-nav__icon md-icon"></span>
+      Validators:
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      <!-- Render nested item list -->
+       
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getValidators/" class="md-nav__link">
+    Get Validators - GET /validators
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getValidatorAddress/" class="md-nav__link">
+    Get Validators - GET /validators/:address
+  </a>
+</li>
+  
+    </ul>
+  </nav>
+</li>
+
+<!-- Currently active page -->
+     <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Determine whether to render item as a section -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+  <!-- Active checkbox expands items contained within nested section -->
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_4"
+    type="checkbox"
+    id="__nav_4"
+    
+  />
+  
+
+  <!-- Expand active pages -->
+  <label class="md-nav__link" for="__nav_4">
+    Wallet:
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav
+    class="md-nav"
+    aria-label="Wallet:"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_4">
+      <span class="md-nav__icon md-icon"></span>
+      Wallet:
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      <!-- Render nested item list -->
+       
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../walletTransactionHistory/" class="md-nav__link">
+    Get Wallet Transaction History - GET /wallet/transactions/history/:address
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../walletTransactionOverview/" class="md-nav__link">
+    Get Wallet Transaction Overview - GET /wallet/transaction/overview/:hash
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../walletBlockHeader/" class="md-nav__link">
+    Get Wallet Block Header - GET /wallet/blocks/header
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../walletUtxo/" class="md-nav__link">
+    Get Wallet UTXO - GET /wallet/utxo/:address
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../walletBalance/" class="md-nav__link">
+    Get Wallet Balance - GET /wallet/balance/:address
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../walletPendingTransactions/" class="md-nav__link">
+    Get Wallet Pending Transactions - GET wallet/transactions/pending/:address
+  </a>
+</li>
+  
+    </ul>
+  </nav>
+</li>
+
+<!-- Currently active page -->
+     <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Determine whether to render item as a section -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+  <!-- Active checkbox expands items contained within nested section -->
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_5"
+    type="checkbox"
+    id="__nav_5"
+    
+  />
+  
+
+  <!-- Expand active pages -->
+  <label class="md-nav__link" for="__nav_5">
+    Holders:
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav
+    class="md-nav"
+    aria-label="Holders:"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_5">
+      <span class="md-nav__icon md-icon"></span>
+      Holders:
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      <!-- Render nested item list -->
+       
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getHolders/" class="md-nav__link">
+    Get BOA Holders - GET /holders
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getHolder/" class="md-nav__link">
+    Get BOA Holder - GET /holder/:address
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../holderBalanceHistory/" class="md-nav__link">
+    Get HolderBalanceHistory - GET /holder_balance_history/:address
+  </a>
+</li>
+  
+    </ul>
+  </nav>
+</li>
+
+<!-- Currently active page -->
+     <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Determine whether to render item as a section -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+  <!-- Active checkbox expands items contained within nested section -->
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_6"
+    type="checkbox"
+    id="__nav_6"
+    
+  />
+  
+
+  <!-- Expand active pages -->
+  <label class="md-nav__link" for="__nav_6">
+    Fee:
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav
+    class="md-nav"
+    aria-label="Fee:"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_6">
+      <span class="md-nav__icon md-icon"></span>
+      Fee:
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      <!-- Render nested item list -->
+       
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../averageFeeChart/" class="md-nav__link">
+    Get average fee chart - GET /average_fee_chart
+  </a>
+</li>
+  
+    </ul>
+  </nav>
+</li>
+
+<!-- Currently active page -->
+     <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Determine whether to render item as a section -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+  <!-- Active checkbox expands items contained within nested section -->
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_7"
+    type="checkbox"
+    id="__nav_7"
+    
+  />
+  
+
+  <!-- Expand active pages -->
+  <label class="md-nav__link" for="__nav_7">
+    Search:
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav
+    class="md-nav"
+    aria-label="Search:"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_7">
+      <span class="md-nav__icon md-icon"></span>
+      Search:
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      <!-- Render nested item list -->
+       
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../search/" class="md-nav__link">
+    Get search  - GET /search/hash
+  </a>
+</li>
+  
+    </ul>
+  </nav>
+</li>
+
+<!-- Currently active page -->
+     <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+   
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Determine whether to render item as a section -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <!-- Active checkbox expands items contained within nested section -->
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_8"
+    type="checkbox"
+    id="__nav_8"
+    checked
+  />
+  
+
+  <!-- Expand active pages -->
+  <label class="md-nav__link" for="__nav_8">
+    Coin Market:
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav
+    class="md-nav"
+    aria-label="Coin Market:"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_8">
+      <span class="md-nav__icon md-icon"></span>
+      Coin Market:
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      <!-- Render nested item list -->
+       
+
+<!-- Determine class according to state -->
+   
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item md-nav__item--active">
+  
+
+  <!-- Active checkbox expands items contained within nested section -->
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="toc"
+    type="checkbox"
+    id="__toc"
+  />
+
+  <!-- Hack: see partials/toc.html for more information -->
+  
+
+  <!-- Render table of contents, if not empty -->
+  
+  <a href="./" class="md-nav__link md-nav__link--active">
+    Get Coin Market Chart  - GET /coinarketchart
+  </a>
+
+  <!-- Show table of contents -->
+  
+</li>
+
+<!-- Main navigation item -->
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../coinMarketCap/" class="md-nav__link">
+    Get Coin Market Cap for BOA. - GET /coinarketcap
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../boa-stats/" class="md-nav__link">
+    Get Boa Stats. - GET /boa-stats
+  </a>
+</li>
+  
+    </ul>
+  </nav>
+</li>
+
+<!-- Currently active page -->
+     <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Determine whether to render item as a section -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+  <!-- Active checkbox expands items contained within nested section -->
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_9"
+    type="checkbox"
+    id="__nav_9"
+    
+  />
+  
+
+  <!-- Expand active pages -->
+  <label class="md-nav__link" for="__nav_9">
+    Transactions:
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav
+    class="md-nav"
+    aria-label="Transactions:"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_9">
+      <span class="md-nav__icon md-icon"></span>
+      Transactions:
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      <!-- Render nested item list -->
+       
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../latestTransactions/" class="md-nav__link">
+    Get Latest transactions - GET /latest-transactions
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getTransaction/" class="md-nav__link">
+    Get transaction - GET /transaction/:hash
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getTransactionFee/" class="md-nav__link">
+    Get transaction fee -GET /transaction/fees/:tx_size
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getTransactionStatus/" class="md-nav__link">
+    Get transaction status - GET /transaction/status/:hash
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getPendingTransaction/" class="md-nav__link">
+    Get pending transactions - GET /transaction/pending/:hash
+  </a>
+</li>
+  
+    </ul>
+  </nav>
+</li>
+
+<!-- Currently active page -->
+     <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Determine whether to render item as a section -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+  <!-- Active checkbox expands items contained within nested section -->
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_10"
+    type="checkbox"
+    id="__nav_10"
+    
+  />
+  
+
+  <!-- Expand active pages -->
+  <label class="md-nav__link" for="__nav_10">
+    UTXO:
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav
+    class="md-nav"
+    aria-label="UTXO:"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_10">
+      <span class="md-nav__icon md-icon"></span>
+      UTXO:
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      <!-- Render nested item list -->
+       
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getUTXO/" class="md-nav__link">
+    Get utxo  - GET /utxo/:address
+  </a>
+</li>
+  
+    </ul>
+  </nav>
+</li>
+
+<!-- Currently active page -->
+     <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+
+
+<!-- Render current and nested navigation items -->
+
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+
+<!-- Determine whether to render item as a section -->
+
+
+<!-- Render item with nested items -->
+<li class="md-nav__item md-nav__item--nested">
+  <!-- Active checkbox expands items contained within nested section -->
+   
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="__nav_11"
+    type="checkbox"
+    id="__nav_11"
+    
+  />
+  
+
+  <!-- Expand active pages -->
+  <label class="md-nav__link" for="__nav_11">
+    Proposals:
+    <span class="md-nav__icon md-icon"></span>
+  </label>
+  <nav
+    class="md-nav"
+    aria-label="Proposals:"
+    data-md-level="1"
+  >
+    <label class="md-nav__title" for="__nav_11">
+      <span class="md-nav__icon md-icon"></span>
+      Proposals:
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      <!-- Render nested item list -->
+       
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getProposals/" class="md-nav__link">
+    Get proposal list  - GET /proposals
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getProposalsByID/" class="md-nav__link">
+    Get proposal by proposal_id  - GET /proposals/proposal_id
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getVotingDetails/" class="md-nav__link">
+    Get proposal voting Details - GET /voting_details/proposal_id
+  </a>
+</li>
+  
+    </ul>
+  </nav>
+</li>
+
+<!-- Currently active page -->
+  
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Get Coin Market Chart  - GET /coinarketchart</h1>
+                
+                <h6>Endpoint</h6>
+
+<p id="endpoint"></p>
+<p>HTTP Method: <strong>GET</strong></p>
+<p>Returns BOA statistics of last 24 hours.
+<br/>
+<button class="md-button" onclick="tryNow()">Try Now</button></p>
+<script>
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/coinmarketchart`
+    function tryNow(){
+        document.getElementById("showResult").innerHTML =""
+        document.getElementById("endpoint").innerHTML =""
+        fetch(`https://dev-stoa-boascan.bosagora.com/coinmarketchart`).then((res) => {
+            res.json().then((res) => {
+                document.getElementById("showResult").innerHTML = JSON.stringify(res)
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/coinmarketchart`
+                })
+        }).catch((err) => {
+            console.log(err)
+        })
+    }
+</script>
+<p id="showResult"></p>
+<p>| Query String | Explanation    | Example                            |
+</br></p>
+<p>Example Response JSON:<br/>
+[
+    {
+        "usd_price": "0.109532",
+        "last_updated_at": 1631784722
+    },
+    {
+        "usd_price": "0.109569",
+        "last_updated_at": 1631785238
+    },
+    {
+        "usd_price": "0.109509",
+        "last_updated_at": 1631785484
+    },
+    {
+        "usd_price": "0.109526",
+        "last_updated_at": 1631785607
+    },
+    {
+        "usd_price": "0.109414",
+        "last_updated_at": 1631786146
+    },
+    {
+        "usd_price": "0.109331",
+        "last_updated_at": 1631786478
+    },
+    {
+        "usd_price": "0.109823",
+        "last_updated_at": 1631786693
+    },
+    {
+        "usd_price": "0.109796",
+        "last_updated_at": 1631786914
+    },
+    {
+        "usd_price": "0.109862",
+        "last_updated_at": 1631787184
+    },
+    {
+        "usd_price": "0.109762",
+        "last_updated_at": 1631787506
+    },
+    {
+        "usd_price": "0.109789",
+        "last_updated_at": 1631787832
+    },
+    {
+        "usd_price": "0.109485",
+        "last_updated_at": 1631788249
+    },
+    {
+        "usd_price": "0.109483",
+        "last_updated_at": 1631788499
+    },
+    {
+        "usd_price": "0.109455",
+        "last_updated_at": 1631788802
+    },
+    {
+        "usd_price": "0.109685",
+        "last_updated_at": 1631789094
+    },
+    {
+        "usd_price": "0.109901",
+        "last_updated_at": 1631789691
+    },
+    {
+        "usd_price": "0.109808",
+        "last_updated_at": 1631790237
+    },
+    {
+        "usd_price": "0.109708",
+        "last_updated_at": 1631790427
+    },
+    {
+        "usd_price": "0.109871",
+        "last_updated_at": 1631790697
+    },
+    {
+        "usd_price": "0.109749",
+        "last_updated_at": 1631791151
+    },
+    {
+        "usd_price": "0.109812",
+        "last_updated_at": 1631791282
+    },
+    {
+        "usd_price": "0.109861",
+        "last_updated_at": 1631791641
+    },
+    {
+        "usd_price": "0.109654",
+        "last_updated_at": 1631791967
+    },
+    {
+        "usd_price": "0.109788",
+        "last_updated_at": 1631792232
+    },
+    {
+        "usd_price": "0.110236",
+        "last_updated_at": 1631792692
+    },
+    {
+        "usd_price": "0.110261",
+        "last_updated_at": 1631793357
+    },
+    {
+        "usd_price": "0.110146",
+        "last_updated_at": 1631793819
+    },
+    {
+        "usd_price": "0.110264",
+        "last_updated_at": 1631794080
+    },
+    {
+        "usd_price": "0.110011",
+        "last_updated_at": 1631794394
+    },
+    {
+        "usd_price": "0.109900",
+        "last_updated_at": 1631794759
+    },
+    {
+        "usd_price": "0.109716",
+        "last_updated_at": 1631795015
+    },
+    {
+        "usd_price": "0.109682",
+        "last_updated_at": 1631795384
+    },
+    {
+        "usd_price": "0.109839",
+        "last_updated_at": 1631795546
+    },
+    {
+        "usd_price": "0.109899",
+        "last_updated_at": 1631796031
+    },
+    {
+        "usd_price": "0.109949",
+        "last_updated_at": 1631796123
+    },
+    {
+        "usd_price": "0.109927",
+        "last_updated_at": 1631796411
+    },
+    {
+        "usd_price": "0.109828",
+        "last_updated_at": 1631796917
+    },
+    {
+        "usd_price": "0.111365",
+        "last_updated_at": 1631797556
+    },
+    {
+        "usd_price": "0.111316",
+        "last_updated_at": 1631797867
+    },
+    {
+        "usd_price": "0.111967",
+        "last_updated_at": 1631798145
+    },
+    {
+        "usd_price": "0.111863",
+        "last_updated_at": 1631798324
+    },
+    {
+        "usd_price": "0.111475",
+        "last_updated_at": 1631798661
+    },
+    {
+        "usd_price": "0.111477",
+        "last_updated_at": 1631798984
+    },
+    {
+        "usd_price": "0.111109",
+        "last_updated_at": 1631799352
+    },
+    {
+        "usd_price": "0.110979",
+        "last_updated_at": 1631799780
+    },
+    {
+        "usd_price": "0.110951",
+        "last_updated_at": 1631800056
+    },
+    {
+        "usd_price": "0.110736",
+        "last_updated_at": 1631800429
+    },
+    {
+        "usd_price": "0.110929",
+        "last_updated_at": 1631801132
+    },
+    {
+        "usd_price": "0.110427",
+        "last_updated_at": 1631801433
+    },
+    {
+        "usd_price": "0.110546",
+        "last_updated_at": 1631801512
+    },
+    {
+        "usd_price": "0.110186",
+        "last_updated_at": 1631801893
+    },
+    {
+        "usd_price": "0.110190",
+        "last_updated_at": 1631802272
+    },
+    {
+        "usd_price": "0.110238",
+        "last_updated_at": 1631802445
+    },
+    {
+        "usd_price": "0.109880",
+        "last_updated_at": 1631802870
+    },
+    {
+        "usd_price": "0.109806",
+        "last_updated_at": 1631803416
+    },
+    {
+        "usd_price": "0.110535",
+        "last_updated_at": 1631803860
+    },
+    {
+        "usd_price": "0.110563",
+        "last_updated_at": 1631804134
+    },
+    {
+        "usd_price": "0.110591",
+        "last_updated_at": 1631804191
+    },
+    {
+        "usd_price": "0.110531",
+        "last_updated_at": 1631804531
+    },
+    {
+        "usd_price": "0.110143",
+        "last_updated_at": 1631804814
+    },
+    {
+        "usd_price": "0.109872",
+        "last_updated_at": 1631805361
+    },
+    {
+        "usd_price": "0.109983",
+        "last_updated_at": 1631805580
+    },
+    {
+        "usd_price": "0.109854",
+        "last_updated_at": 1631805942
+    },
+    {
+        "usd_price": "0.110146",
+        "last_updated_at": 1631806279
+    },
+    {
+        "usd_price": "0.109711",
+        "last_updated_at": 1631806519
+    },
+    {
+        "usd_price": "0.109716",
+        "last_updated_at": 1631806596
+    },
+    {
+        "usd_price": "0.109651",
+        "last_updated_at": 1631806974
+    },
+    {
+        "usd_price": "0.109926",
+        "last_updated_at": 1631807371
+    },
+    {
+        "usd_price": "0.109914",
+        "last_updated_at": 1631807681
+    },
+    {
+        "usd_price": "0.109894",
+        "last_updated_at": 1631808020
+    },
+    {
+        "usd_price": "0.109565",
+        "last_updated_at": 1631808146
+    },
+    {
+        "usd_price": "0.109682",
+        "last_updated_at": 1631808446
+    },
+    {
+        "usd_price": "0.108888",
+        "last_updated_at": 1631808785
+    },
+    {
+        "usd_price": "0.108786",
+        "last_updated_at": 1631809113
+    },
+    {
+        "usd_price": "0.108764",
+        "last_updated_at": 1631809469
+    },
+    {
+        "usd_price": "0.108752",
+        "last_updated_at": 1631809807
+    },
+    {
+        "usd_price": "0.108648",
+        "last_updated_at": 1631810090
+    },
+    {
+        "usd_price": "0.108595",
+        "last_updated_at": 1631810459
+    },
+    {
+        "usd_price": "0.108678",
+        "last_updated_at": 1631810640
+    },
+    {
+        "usd_price": "0.108680",
+        "last_updated_at": 1631810977
+    },
+    {
+        "usd_price": "0.108567",
+        "last_updated_at": 1631811275
+    },
+    {
+        "usd_price": "0.108576",
+        "last_updated_at": 1631811620
+    },
+    {
+        "usd_price": "0.108505",
+        "last_updated_at": 1631811912
+    },
+    {
+        "usd_price": "0.107850",
+        "last_updated_at": 1631812083
+    },
+    {
+        "usd_price": "0.107862",
+        "last_updated_at": 1631812494
+    },
+    {
+        "usd_price": "0.108603",
+        "last_updated_at": 1631812673
+    },
+    {
+        "usd_price": "0.108598",
+        "last_updated_at": 1631813137
+    },
+    {
+        "usd_price": "0.108506",
+        "last_updated_at": 1631813324
+    },
+    {
+        "usd_price": "0.108485",
+        "last_updated_at": 1631813673
+    },
+    {
+        "usd_price": "0.108314",
+        "last_updated_at": 1631813940
+    },
+    {
+        "usd_price": "0.107629",
+        "last_updated_at": 1631814286
+    },
+    {
+        "usd_price": "0.107373",
+        "last_updated_at": 1631814754
+    },
+    {
+        "usd_price": "0.108251",
+        "last_updated_at": 1631815498
+    },
+    {
+        "usd_price": "0.108232",
+        "last_updated_at": 1631815561
+    },
+    {
+        "usd_price": "0.108215",
+        "last_updated_at": 1631816063
+    },
+    {
+        "usd_price": "0.108103",
+        "last_updated_at": 1631816312
+    },
+    {
+        "usd_price": "0.108220",
+        "last_updated_at": 1631816611
+    },
+    {
+        "usd_price": "0.108339",
+        "last_updated_at": 1631817035
+    },
+    {
+        "usd_price": "0.108291",
+        "last_updated_at": 1631817192
+    },
+    {
+        "usd_price": "0.108247",
+        "last_updated_at": 1631817577
+    },
+    {
+        "usd_price": "0.108196",
+        "last_updated_at": 1631817869
+    },
+    {
+        "usd_price": "0.108213",
+        "last_updated_at": 1631818348
+    },
+    {
+        "usd_price": "0.108226",
+        "last_updated_at": 1631818745
+    },
+    {
+        "usd_price": "0.108470",
+        "last_updated_at": 1631819142
+    },
+    {
+        "usd_price": "0.108290",
+        "last_updated_at": 1631819274
+    },
+    {
+        "usd_price": "0.108300",
+        "last_updated_at": 1631819693
+    },
+    {
+        "usd_price": "0.108334",
+        "last_updated_at": 1631820078
+    },
+    {
+        "usd_price": "0.108322",
+        "last_updated_at": 1631820336
+    },
+    {
+        "usd_price": "0.108104",
+        "last_updated_at": 1631820578
+    },
+    {
+        "usd_price": "0.108323",
+        "last_updated_at": 1631820826
+    },
+    {
+        "usd_price": "0.108266",
+        "last_updated_at": 1631821533
+    },
+    {
+        "usd_price": "0.108348",
+        "last_updated_at": 1631822094
+    },
+    {
+        "usd_price": "0.108297",
+        "last_updated_at": 1631822325
+    },
+    {
+        "usd_price": "0.108123",
+        "last_updated_at": 1631822563
+    },
+    {
+        "usd_price": "0.108012",
+        "last_updated_at": 1631822891
+    },
+    {
+        "usd_price": "0.108226",
+        "last_updated_at": 1631823235
+    },
+    {
+        "usd_price": "0.108269",
+        "last_updated_at": 1631823635
+    },
+    {
+        "usd_price": "0.108304",
+        "last_updated_at": 1631823860
+    },
+    {
+        "usd_price": "0.108314",
+        "last_updated_at": 1631824255
+    },
+    {
+        "usd_price": "0.108174",
+        "last_updated_at": 1631824558
+    },
+    {
+        "usd_price": "0.108226",
+        "last_updated_at": 1631824749
+    },
+    {
+        "usd_price": "0.108213",
+        "last_updated_at": 1631825020
+    },
+    {
+        "usd_price": "0.108195",
+        "last_updated_at": 1631825287
+    },
+    {
+        "usd_price": "0.108129",
+        "last_updated_at": 1631825746
+    },
+    {
+        "usd_price": "0.108347",
+        "last_updated_at": 1631825823
+    },
+    {
+        "usd_price": "0.108174",
+        "last_updated_at": 1631826325
+    },
+    {
+        "usd_price": "0.108299",
+        "last_updated_at": 1631826488
+    },
+    {
+        "usd_price": "0.108078",
+        "last_updated_at": 1631826868
+    },
+    {
+        "usd_price": "0.108133",
+        "last_updated_at": 1631827259
+    },
+    {
+        "usd_price": "0.108670",
+        "last_updated_at": 1631827512
+    },
+    {
+        "usd_price": "0.108485",
+        "last_updated_at": 1631828101
+    },
+    {
+        "usd_price": "0.108502",
+        "last_updated_at": 1631828677
+    },
+    {
+        "usd_price": "0.108466",
+        "last_updated_at": 1631828884
+    },
+    {
+        "usd_price": "0.108530",
+        "last_updated_at": 1631829325
+    },
+    {
+        "usd_price": "0.108564",
+        "last_updated_at": 1631829750
+    },
+    {
+        "usd_price": "0.108642",
+        "last_updated_at": 1631830070
+    },
+    {
+        "usd_price": "0.110391",
+        "last_updated_at": 1631830311
+    },
+    {
+        "usd_price": "0.110005",
+        "last_updated_at": 1631830886
+    },
+    {
+        "usd_price": "0.109978",
+        "last_updated_at": 1631831054
+    },
+    {
+        "usd_price": "0.109914",
+        "last_updated_at": 1631831300
+    },
+    {
+        "usd_price": "0.109917",
+        "last_updated_at": 1631831597
+    },
+    {
+        "usd_price": "0.109802",
+        "last_updated_at": 1631831813
+    },
+    {
+        "usd_price": "0.109669",
+        "last_updated_at": 1631832336
+    },
+    {
+        "usd_price": "0.109627",
+        "last_updated_at": 1631832432
+    },
+    {
+        "usd_price": "0.109622",
+        "last_updated_at": 1631832753
+    },
+    {
+        "usd_price": "0.109697",
+        "last_updated_at": 1631833107
+    },
+    {
+        "usd_price": "0.109612",
+        "last_updated_at": 1631833544
+    },
+    {
+        "usd_price": "0.109565",
+        "last_updated_at": 1631833789
+    },
+    {
+        "usd_price": "0.109404",
+        "last_updated_at": 1631833941
+    },
+    {
+        "usd_price": "0.109413",
+        "last_updated_at": 1631834667
+    },
+    {
+        "usd_price": "0.109448",
+        "last_updated_at": 1631835017
+    },
+    {
+        "usd_price": "0.109530",
+        "last_updated_at": 1631835209
+    },
+    {
+        "usd_price": "0.109316",
+        "last_updated_at": 1631835478
+    },
+    {
+        "usd_price": "0.109453",
+        "last_updated_at": 1631835943
+    },
+    {
+        "usd_price": "0.109569",
+        "last_updated_at": 1631836235
+    },
+    {
+        "usd_price": "0.109831",
+        "last_updated_at": 1631836479
+    },
+    {
+        "usd_price": "0.109826",
+        "last_updated_at": 1631836775
+    },
+    {
+        "usd_price": "0.109785",
+        "last_updated_at": 1631836966
+    },
+    {
+        "usd_price": "0.109712",
+        "last_updated_at": 1631837443
+    },
+    {
+        "usd_price": "0.109733",
+        "last_updated_at": 1631837622
+    },
+    {
+        "usd_price": "0.109826",
+        "last_updated_at": 1631837967
+    },
+    {
+        "usd_price": "0.110055",
+        "last_updated_at": 1631838329
+    },
+    {
+        "usd_price": "0.109855",
+        "last_updated_at": 1631838688
+    },
+    {
+        "usd_price": "0.110009",
+        "last_updated_at": 1631838808
+    },
+    {
+        "usd_price": "0.109744",
+        "last_updated_at": 1631839192
+    },
+    {
+        "usd_price": "0.109720",
+        "last_updated_at": 1631839383
+    },
+    {
+        "usd_price": "0.109713",
+        "last_updated_at": 1631839744
+    },
+    {
+        "usd_price": "0.109699",
+        "last_updated_at": 1631839866
+    },
+    {
+        "usd_price": "0.109913",
+        "last_updated_at": 1631840403
+    },
+    {
+        "usd_price": "0.109911",
+        "last_updated_at": 1631840667
+    },
+    {
+        "usd_price": "0.109694",
+        "last_updated_at": 1631840889
+    },
+    {
+        "usd_price": "0.110342",
+        "last_updated_at": 1631841352
+    },
+    {
+        "usd_price": "0.110452",
+        "last_updated_at": 1631841596
+    },
+    {
+        "usd_price": "0.111263",
+        "last_updated_at": 1631841909
+    },
+    {
+        "usd_price": "0.111517",
+        "last_updated_at": 1631842205
+    },
+    {
+        "usd_price": "0.111734",
+        "last_updated_at": 1631842373
+    },
+    {
+        "usd_price": "0.111802",
+        "last_updated_at": 1631842761
+    },
+    {
+        "usd_price": "0.111748",
+        "last_updated_at": 1631843053
+    },
+    {
+        "usd_price": "0.112613",
+        "last_updated_at": 1631843404
+    },
+    {
+        "usd_price": "0.112635",
+        "last_updated_at": 1631844073
+    },
+    {
+        "usd_price": "0.112636",
+        "last_updated_at": 1631844188
+    },
+    {
+        "usd_price": "0.112943",
+        "last_updated_at": 1631844491
+    },
+    {
+        "usd_price": "0.111538",
+        "last_updated_at": 1631844880
+    },
+    {
+        "usd_price": "0.111525",
+        "last_updated_at": 1631844976
+    },
+    {
+        "usd_price": "0.111698",
+        "last_updated_at": 1631845491
+    },
+    {
+        "usd_price": "0.111680",
+        "last_updated_at": 1631845556
+    },
+    {
+        "usd_price": "0.111570",
+        "last_updated_at": 1631846061
+    },
+    {
+        "usd_price": "0.112040",
+        "last_updated_at": 1631846442
+    },
+    {
+        "usd_price": "0.111997",
+        "last_updated_at": 1631846671
+    },
+    {
+        "usd_price": "0.111915",
+        "last_updated_at": 1631846778
+    },
+    {
+        "usd_price": "0.111823",
+        "last_updated_at": 1631847297
+    },
+    {
+        "usd_price": "0.111934",
+        "last_updated_at": 1631847436
+    },
+    {
+        "usd_price": "0.111546",
+        "last_updated_at": 1631847834
+    },
+    {
+        "usd_price": "0.111560",
+        "last_updated_at": 1631848128
+    },
+    {
+        "usd_price": "0.111458",
+        "last_updated_at": 1631848439
+    },
+    {
+        "usd_price": "0.111689",
+        "last_updated_at": 1631848829
+    },
+    {
+        "usd_price": "0.111678",
+        "last_updated_at": 1631848937
+    },
+    {
+        "usd_price": "0.111294",
+        "last_updated_at": 1631849238
+    },
+    {
+        "usd_price": "0.111037",
+        "last_updated_at": 1631849734
+    },
+    {
+        "usd_price": "0.111070",
+        "last_updated_at": 1631849917
+    },
+    {
+        "usd_price": "0.111395",
+        "last_updated_at": 1631850299
+    },
+    {
+        "usd_price": "0.111285",
+        "last_updated_at": 1631850685
+    },
+    {
+        "usd_price": "0.111460",
+        "last_updated_at": 1631850856
+    },
+    {
+        "usd_price": "0.111385",
+        "last_updated_at": 1631851136
+    },
+    {
+        "usd_price": "0.111520",
+        "last_updated_at": 1631851476
+    },
+    {
+        "usd_price": "0.111492",
+        "last_updated_at": 1631851853
+    },
+    {
+        "usd_price": "0.111684",
+        "last_updated_at": 1631852018
+    },
+    {
+        "usd_price": "0.111651",
+        "last_updated_at": 1631852338
+    },
+    {
+        "usd_price": "0.111641",
+        "last_updated_at": 1631852754
+    },
+    {
+        "usd_price": "0.111752",
+        "last_updated_at": 1631852818
+    }
+]</p>
+                
+              
+              
+                <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Set from config but allow override -->
+
+
+
+<!-- Disqus integration -->
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Footer -->
+<footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
+  
+    <nav
+      class="md-footer__inner md-grid"
+      aria-label="Footer"
+    >
+
+      <!-- Link to previous page -->
+      
+        <a
+          href="../search/"
+          class="md-footer__link md-footer__link--prev"
+          rel="prev"
+        >
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Get search  - GET /search/hash
+            </div>
+          </div>
+        </a>
+      
+
+      <!-- Link to next page -->
+      
+        <a
+          href="../coinMarketCap/"
+          class="md-footer__link md-footer__link--next"
+          rel="next"
+        >
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Get Coin Market Cap for BOA. - GET /coinarketcap
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+
+  <!-- Further information -->
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
+      <div class="md-footer-copyright">
+        
+        <!-- Documents for BOSAGORA -->
+        <!-- <a
+          href="https://squidfunk.github.io/mkdocs-material/"
+          target="_blank" rel="noopener"
+        > -->
+          <!-- BOSAGORA APIs -->
+        <!-- </a> -->
+        
+      </div>
+
+      <!-- Social links -->
+      <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Social links in footer -->
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.65ce87ac.min.js"></script>
+      
+        <script src="../javascripts/extra.js"></script>
+      
+    
+  </body>
+</html>

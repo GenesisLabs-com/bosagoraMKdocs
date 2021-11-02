@@ -7,15 +7,16 @@ HTTP Method: **GET**
 Returns statistics of BOA coin.
 </br>
 <button class="md-button" onclick="tryNow()">Try Now</button>
+
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/boa-stats`
+   document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/boa-stats"
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/boa-stats`).then((res) => {
+        fetch("https://dev-stoa-boascan.bosagora.com/boa-stats").then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/boa-stats`
+                document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/boa-stats"
                 })
         }).catch((err) => {
             console.log(err)
@@ -23,10 +24,10 @@ Returns statistics of BOA coin.
     }
 </script>
 <p id="showResult"></p>
-<br/>
-| Query String | Explanation | Example    
 
-<br/>
+| Query String | Explanation    | Example                            |
+| --------- | ------------ | ------------------------------------ |
+| currency      | currency | usd |
 
 Example Response JSON:<br/>
 {

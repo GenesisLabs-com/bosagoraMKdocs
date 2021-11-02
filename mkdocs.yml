@@ -33,7 +33,7 @@ nav:
       - Get search  - GET /search/hash : search.md 
 
   - Coin Market::
-      - Get coinMarketChart  - GET /coinarketchart : coinMarketChart.md 
+      - Get Coin Market Chart  - GET /coinarketchart : coinMarketChart.md 
       - Get Coin Market Cap for BOA. - GET /coinarketcap : coinMarketCap.md  
       - Get Boa Stats. - GET /boa-stats: boa-stats.md 
 
