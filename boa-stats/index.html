@@ -1153,7 +1153,7 @@
 
 <li class="md-nav__item">
   <a href="../coinMarketChart/" class="md-nav__link">
-    Get coinMarketChart  - GET /coinarketchart
+    Get Coin Market Chart  - GET /coinarketchart
   </a>
 </li>
    
@@ -1555,14 +1555,14 @@
 </br>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/boa-stats`
+   document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/boa-stats"
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/boa-stats`).then((res) => {
+        fetch("https://dev-stoa-boascan.bosagora.com/boa-stats").then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/boa-stats`
+                document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/boa-stats"
                 })
         }).catch((err) => {
             console.log(err)
@@ -1570,9 +1570,23 @@
     }
 </script>
 <p id="showResult"></p>
-<p><br/>
-| Query String | Explanation | Example    </p>
-<p><br/></p>
+
+<table>
+<thead>
+<tr>
+<th>Query String</th>
+<th>Explanation</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currency</td>
+<td>currency</td>
+<td>usd</td>
+</tr>
+</tbody>
+</table>
 <p>Example Response JSON:<br/>
 {
     "height":15,"transactions":2,"validators":1,"frozen_coin":5283595,"circulating_supply":5283535,"active_validators":155055

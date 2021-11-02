@@ -200,7 +200,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <!-- <a href="/transactions">Transactions</a> -->
           <!-- <span class="md-ellipsis">
-             Get coinMarketChart  - GET /coinarketchart 
+             Get Coin Market Chart  - GET /coinarketchart 
           </span> -->
         </div>
       </div>
@@ -1168,7 +1168,7 @@
   <!-- Render table of contents, if not empty -->
   
   <a href="./" class="md-nav__link md-nav__link--active">
-    Get coinMarketChart  - GET /coinarketchart
+    Get Coin Market Chart  - GET /coinarketchart
   </a>
 
   <!-- Show table of contents -->
@@ -1544,24 +1544,24 @@
               
                 
                 
-                  <h1>Get coinMarketChart  - GET /coinarketchart</h1>
+                  <h1>Get Coin Market Chart  - GET /coinarketchart</h1>
                 
                 <h6>Endpoint</h6>
-
 <p id="endpoint"></p>
+
 <p>HTTP Method: <strong>GET</strong></p>
 <p>Returns BOA statistics of last 24 hours.
 <br/>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-   document.getElementById("endpoint").innerHTML =`http://3.38.34.30/coinmarketchart`
+   document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/coinmarketchart?currency=usd"
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/coinmarketchart`).then((res) => {
+        fetch("https://dev-stoa-boascan.bosagora.com/coinmarketchart?currency=usd").then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/coinmarketchart`
+                document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/coinmarketchart?currency=usd"
                 })
         }).catch((err) => {
             console.log(err)
@@ -1569,8 +1569,27 @@
     }
 </script>
 <p id="showResult"></p>
-<p>| Query String | Explanation    | Example                            |
-</br></p>
+<table>
+<thead>
+<tr>
+<th>Query String</th>
+<th>Explanation</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currency</td>
+<td>currency</td>
+<td>usd</td>
+</tr>
+<tr>
+<td></br></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>Example Response JSON:<br/>
 [
     {
