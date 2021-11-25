@@ -59,7 +59,7 @@ nav:
   - Proposals::
       - Get proposal list  - GET /proposals : getProposals.md 
       - Get proposal by proposal_id  - GET /proposals/proposal_id : getProposalsByID.md 
-      - Get proposal voting Details - GET /voting_details/proposal_id: getVotingDetails.md
+      - Get proposal voting Details - GET /voting_details/proposal_id: getVotingDetails.md 
 
 theme:
   name: material
