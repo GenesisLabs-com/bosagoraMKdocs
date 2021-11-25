@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <!-- <a href="/transactions">Transactions</a> -->
           <!-- <span class="md-ellipsis">
-             Get transaction - GET /transaction/:hash 
+             Get Validators - GET /validators/validator_rewards 
           </span> -->
         </div>
       </div>
@@ -534,7 +534,7 @@
 
 
 <!-- Determine class according to state -->
- 
+   
 
 <!-- Main navigation item with nested items -->
 
@@ -543,7 +543,7 @@
 
 
 <!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
   <!-- Active checkbox expands items contained within nested section -->
    
   <input
@@ -551,7 +551,7 @@
     data-md-toggle="__nav_3"
     type="checkbox"
     id="__nav_3"
-    
+    checked
   />
   
 
@@ -634,15 +634,35 @@
    
 
 <!-- Determine class according to state -->
- 
+   
 
 <!-- Main navigation item with nested items -->
 
-<li class="md-nav__item">
-  <a href="../getValidatorRewards/" class="md-nav__link">
+<li class="md-nav__item md-nav__item--active">
+  
+
+  <!-- Active checkbox expands items contained within nested section -->
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="toc"
+    type="checkbox"
+    id="__toc"
+  />
+
+  <!-- Hack: see partials/toc.html for more information -->
+  
+
+  <!-- Render table of contents, if not empty -->
+  
+  <a href="./" class="md-nav__link md-nav__link--active">
     Get Validators - GET /validators/validator_rewards
   </a>
+
+  <!-- Show table of contents -->
+  
 </li>
+
+<!-- Main navigation item -->
   
     </ul>
   </nav>
@@ -1242,7 +1262,7 @@
 
 
 <!-- Determine class according to state -->
-   
+ 
 
 <!-- Main navigation item with nested items -->
 
@@ -1251,7 +1271,7 @@
 
 
 <!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<li class="md-nav__item md-nav__item--nested">
   <!-- Active checkbox expands items contained within nested section -->
    
   <input
@@ -1259,7 +1279,7 @@
     data-md-toggle="__nav_9"
     type="checkbox"
     id="__nav_9"
-    checked
+    
   />
   
 
@@ -1294,35 +1314,15 @@
    
 
 <!-- Determine class according to state -->
-   
+ 
 
 <!-- Main navigation item with nested items -->
 
-<li class="md-nav__item md-nav__item--active">
-  
-
-  <!-- Active checkbox expands items contained within nested section -->
-  <input
-    class="md-nav__toggle md-toggle"
-    data-md-toggle="toc"
-    type="checkbox"
-    id="__toc"
-  />
-
-  <!-- Hack: see partials/toc.html for more information -->
-  
-
-  <!-- Render table of contents, if not empty -->
-  
-  <a href="./" class="md-nav__link md-nav__link--active">
+<li class="md-nav__item">
+  <a href="../getTransaction/" class="md-nav__link">
     Get transaction - GET /transaction/:hash
   </a>
-
-  <!-- Show table of contents -->
-  
 </li>
-
-<!-- Main navigation item -->
    
 
 <!-- Determine class according to state -->
@@ -1595,24 +1595,31 @@
               
                 
                 
-                  <h1>Get transaction - GET /transaction/:hash</h1>
+                  <h1>Get Validators - GET /validators/validator_rewards</h1>
                 
                 <h6>Endpoint</h6>
-
 <p id="endpoint"></p>
-<p>HTTP Method: <strong>GET</strong></p>
-<p>Returns a transaction by the transaction hash.
-<input class="md-input" placeholder="Enter Hash" id="hash"></input><br/><br/>
+
+<p>HTTP Method: <strong>GET</strong>
+<br/>
+Returns Reward of the validator
+<input class="md-input" placeholder="Enter address" id="address" width="100"></input><br/>
+<input class="md-input" placeholder="Enter page" id="page" width="100"></input><br/>
+<input class="md-input" placeholder="Enter pageSize" id="pageSize"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transaction/${document.getElementById("hash").value || "0x26866BB263593D024A92103646C48CF35A2B1BFCC49B087915B85DB14A432B373569D56F576242354328A31BF0102A0A78CB806CF6E25D88D7981367833631B7"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/validator/reward/${document.getElementById("address").value || "boa1xrval5rzmma29zh4aqgv3mvcarhwa0w8rgthy3l9vaj3fywf9894ycmjkm8"}?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "10"}`
+   //${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "10"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/transaction/${document.getElementById("hash").value || "0x26866BB263593D024A92103646C48CF35A2B1BFCC49B087915B85DB14A432B373569D56F576242354328A31BF0102A0A78CB806CF6E25D88D7981367833631B7"}`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/validator/reward/${document.getElementById("address").value || "boa1xrval5rzmma29zh4aqgv3mvcarhwa0w8rgthy3l9vaj3fywf9894ycmjkm8"}?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "10"}`)
+        // ${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "10"}`)
+        .then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transaction/${document.getElementById("hash").value || "0x26866BB263593D024A92103646C48CF35A2B1BFCC49B087915B85DB14A432B373569D56F576242354328A31BF0102A0A78CB806CF6E25D88D7981367833631B7"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/validator/reward/${document.getElementById("address").value || "boa1xrval5rzmma29zh4aqgv3mvcarhwa0w8rgthy3l9vaj3fywf9894ycmjkm8"}?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "10"}`
+                // ${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "10"}`
                 })
         }).catch((err) => {
             console.log(err)
@@ -1630,14 +1637,20 @@
 </thead>
 <tbody>
 <tr>
-<td>hash</td>
-<td>The hash of the transaction to get</td>
-<td>0x26866BB263593D024A92103646C48CF35A2B1BFCC49B087915B85DB14A432B373569D56F576242354328A31BF0102A0A78CB806CF6E25D88D7981367833631B7</td>
+<td>page</td>
+<td>page number</td>
+<td>1</td>
+</tr>
+<tr>
+<td>page size</td>
+<td>Number of records in a page</td>
+<td>6</td>
 </tr>
 </tbody>
 </table>
-<p>Example Response JSON:<br/>
-{"inputs":[],"outputs":[{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}}],"payload":"","lock_height":"0"}</p>
+<p>Example Request JSON:<br/>
+[{"block_height":288,"steaking_amount":20000000000000,"block_reward":0,"block_fee":254800,"validator_reward":164429715488,"full_count":33},{"block_height":432,"steaking_amount":20000000000000,"block_reward":10468086909851,"block_fee":161700,"validator_reward":174964354323,"full_count":33},{"block_height":576,"steaking_amount":20000000000000,"block_reward":4258235798365,"block_fee":161700,"validator_reward":174964358617,"full_count":33},{"block_height":720,"steaking_amount":20000000000000,"block_reward":8024556742696,"block_fee":254800,"validator_reward":174964910839,"full_count":33},{"block_height":864,"steaking_amount":20000000000000,"block_reward":0,"block_fee":161700,"validator_reward":174964894550,"full_count":33},{"block_height":1008,"steaking_amount":20000000000000,"block_reward":9620869615416,"block_fee":161700,"validator_reward":174965244415,"full_count":33},{"block_height":1152,"steaking_amount":20000000000000,"block_reward":9281980620042,"block_fee":161700,"validator_reward":174965225556,"full_count":33},{"block_height":1296,"steaking_amount":20000000000000,"block_reward":0,"block_fee":161700,"validator_reward":174965481088,"full_count":33},{"block_height":1440,"steaking_amount":20000000000000,"block_reward":0,"block_fee":161700,"validator_reward":174965432209,"full_count":33},{"block_height":1584,"steaking_amount":20000000000000,"block_reward":0,"block_fee":161700,"validator_reward":174965562554,"full_count":33}]</p>
+<p><br/></p>
                 
               
               
@@ -1712,7 +1725,7 @@
       <!-- Link to previous page -->
       
         <a
-          href="../latestTransactions/"
+          href="../getValidatorVotes/"
           class="md-footer__link md-footer__link--prev"
           rel="prev"
         >
@@ -1724,7 +1737,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Get Latest transactions - GET /latest-transactions
+              Get Validators - GET /validators/validator_votes
             </div>
           </div>
         </a>
@@ -1733,7 +1746,7 @@
       <!-- Link to next page -->
       
         <a
-          href="../getTransactionFee/"
+          href="../walletTransactionHistory/"
           class="md-footer__link md-footer__link--next"
           rel="next"
         >
@@ -1742,7 +1755,7 @@
               <span class="md-footer__direction">
                 Next
               </span>
-              Get transaction fee -GET /transaction/fees/:tx_size
+              Get Wallet Transaction History - GET /wallet/transactions/history/:address
             </div>
           </div>
           <div class="md-footer__button md-icon">

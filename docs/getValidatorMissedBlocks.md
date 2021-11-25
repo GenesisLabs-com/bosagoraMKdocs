@@ -27,10 +27,7 @@ Returns Missed Blocks.
 <p id="showResult"></p><br/>
 | Query String | Explanation    | Example                            |
 | --------- | ------------ | ------------------------------------ |
-| page      | page number | 1 |
-| page size      | Number of records in a page | 6 |
+| address      | block address | boa1xrval7gwhjz4k9raqukcnv2n4rl4fxt74m2y9eay6l5mqdf4gntnzhhscrh |
 
 Example Request JSON:<br/>
-{
-"proposal_id":"469008972006","proposal_title":"Title","proposal_type":"Fund","fund_amount":10000000000000,"vote_start_height":1000,"vote_end_height":3026,"proposal_status":"Voting","proposal_date":1629349706,"proposer_name":"슈퍼노드","voting_start_date":1630177200,"voting_end_date":1630609200,"full_count":4
-}
+[{"block_height":4949,"signed":0},{"block_height":4948,"signed":0},{"block_height":4947,"signed":0},{"block_height":4946,"signed":0},{"block_height":4945,"signed":0},{"block_height":4944,"signed":0},{"block_height":4943,"signed":0},{"block_height":4942,"signed":0},{"block_height":4941,"signed":0},{"block_height":4940,"signed":0}]

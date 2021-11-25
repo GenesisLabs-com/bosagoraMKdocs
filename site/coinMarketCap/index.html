@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <!-- <a href="/transactions">Transactions</a> -->
           <!-- <span class="md-ellipsis">
-             Get Coin Market Cap for BOA. - GET /coinarketcap 
+             Get Coin Market Cap for BOA. - GET /coinmarketcap 
           </span> -->
         </div>
       </div>
@@ -595,6 +595,54 @@
     Get Validators - GET /validators/:address
   </a>
 </li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getValidatorMissedBlocks/" class="md-nav__link">
+    Get Validators - GET /validators/missed-blocks
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getBlockValidator/" class="md-nav__link">
+    Get Validators - GET /validators/block_validator
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getValidatorVotes/" class="md-nav__link">
+    Get Validators - GET /validators/validator_votes
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getValidatorRewards/" class="md-nav__link">
+    Get Validators - GET /validators/validator_rewards
+  </a>
+</li>
   
     </ul>
   </nav>
@@ -737,6 +785,30 @@
 <li class="md-nav__item">
   <a href="../walletPendingTransactions/" class="md-nav__link">
     Get Wallet Pending Transactions - GET wallet/transactions/pending/:address
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../walletTransactionDetails/" class="md-nav__link">
+    Get Wallet Transaction Details - GET wallet/transactions/details/
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../walletPendingTransactionsOverview/" class="md-nav__link">
+    Get Wallet Pending Transactions Overview - GET wallet/transactions/pending/overview
   </a>
 </li>
   
@@ -931,6 +1003,18 @@
     Get average fee chart - GET /average_fee_chart
   </a>
 </li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../transactionFeeBySize/" class="md-nav__link">
+    Get transaction fee by size - GET /transaction_fee_by_size
+  </a>
+</li>
   
     </ul>
   </nav>
@@ -1096,7 +1180,7 @@
 
 <li class="md-nav__item">
   <a href="../coinMarketChart/" class="md-nav__link">
-    Get Coin Market Chart  - GET /coinarketchart
+    Get Coin Market Chart  - GET /coinmarketchart
   </a>
 </li>
    
@@ -1123,7 +1207,7 @@
   <!-- Render table of contents, if not empty -->
   
   <a href="./" class="md-nav__link md-nav__link--active">
-    Get Coin Market Cap for BOA. - GET /coinarketcap
+    Get Coin Market Cap for BOA. - GET /coinmarketcap
   </a>
 
   <!-- Show table of contents -->
@@ -1359,6 +1443,30 @@
     Get utxo  - GET /utxo/:address
   </a>
 </li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getWalletUTXO/" class="md-nav__link">
+    Get Wallet utxo  - GET /wallet/utxo/:address
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getTxHashUTXO/" class="md-nav__link">
+    Get txhash utxo  - GET /txhash/:utxo
+  </a>
+</li>
   
     </ul>
   </nav>
@@ -1487,24 +1595,24 @@
               
                 
                 
-                  <h1>Get Coin Market Cap for BOA. - GET /coinarketcap</h1>
+                  <h1>Get Coin Market Cap for BOA. - GET /coinmarketcap</h1>
                 
                 <h6>Endpoint</h6>
-
 <p id="endpoint"></p>
+
 <p>HTTP Method: <strong>GET</strong></p>
 <p>Returns Coin market cap.
 <br/>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/coinmarketcap`
+   document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/coinmarketcap?currency=usd"
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/coinmarketcap`).then((res) => {
+        fetch("https://dev-stoa-boascan.bosagora.com/coinmarketcap?currency=usd").then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/coinmarketcap`
+                document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/coinmarketcap?currency=usd"
                 })
         }).catch((err) => {
             console.log(err)
@@ -1512,7 +1620,22 @@
     }
 </script>
 <p id="showResult"></p>
-<p>| Query String | Explanation    | Example                            |</p>
+<table>
+<thead>
+<tr>
+<th>Query String</th>
+<th>Explanation</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currency</td>
+<td>currency</td>
+<td>usd</td>
+</tr>
+</tbody>
+</table>
 <p>Example Response JSON:<br/>
 {
     "last_updated_at": 1631852818,
@@ -1607,7 +1730,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Get Coin Market Chart  - GET /coinarketchart
+              Get Coin Market Chart  - GET /coinmarketchart
             </div>
           </div>
         </a>

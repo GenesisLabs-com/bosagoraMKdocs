@@ -4,19 +4,18 @@
 
 HTTP Method: **GET**
 
-Returns average transaction fee between range (date - filter)
-<input class="md-input" placeholder="Enter Filter" id="filter" width="100"></input><br/>
-<input class="md-input" placeholder="Enter Date" id="date"></input><br/><br/>
+Returns transaction fee by size
+<input class="md-input" placeholder="Enter size" id="size"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button>
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transaction/fees/250`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transaction/fees/${document.getElementById("size").value || "250"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/transaction/fees/250`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/transaction/fees/${document.getElementById("size").value || "250"}`).then((res) => {
             res.json().then((res) => {
-                document.getElementById("showResult").innerHTML = JSON.stringify(res[0])
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transaction/fees/250`
+                document.getElementById("showResult").innerHTML = JSON.stringify(res)
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transaction/fees/${document.getElementById("size").value || "250"}`
                 })
         }).catch((err) => {
             console.log(err)
@@ -26,10 +25,7 @@ Returns average transaction fee between range (date - filter)
 <p id="showResult"></p>
 | Query String | Explanation    | Example                            |
 | ------------ | -------------- | ---------------------------------- |
-| date         | start date of the range of dates to look up | 1609459200 |
-| filter   | Filter day to display fee chart. | D|
+| fee         | transaction size | 250 |
 
 Example Response JSON:<br/>
-{
-    "height":0,"granularity":"D","time_stamp":1609459200,"average_tx_fee":0,"total_tx_fee":0,"total_payload_fee":0,"total_fee":0
-}
+{"tx_size":250,"high":"192500","high_currency":0.006389,"high_delay":2,"medium":"175000","medium_currency":0.005808,"medium_delay":4,"low":"175000","low_currency":0.005808,"low_delay":13}

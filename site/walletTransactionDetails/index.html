@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <!-- <a href="/transactions">Transactions</a> -->
           <!-- <span class="md-ellipsis">
-             Get transaction - GET /transaction/:hash 
+             Get Wallet Transaction Details - GET wallet/transactions/details/ 
           </span> -->
         </div>
       </div>
@@ -678,7 +678,7 @@
 
 
 <!-- Determine class according to state -->
- 
+   
 
 <!-- Main navigation item with nested items -->
 
@@ -687,7 +687,7 @@
 
 
 <!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--nested">
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
   <!-- Active checkbox expands items contained within nested section -->
    
   <input
@@ -695,7 +695,7 @@
     data-md-toggle="__nav_4"
     type="checkbox"
     id="__nav_4"
-    
+    checked
   />
   
 
@@ -790,15 +790,35 @@
    
 
 <!-- Determine class according to state -->
- 
+   
 
 <!-- Main navigation item with nested items -->
 
-<li class="md-nav__item">
-  <a href="../walletTransactionDetails/" class="md-nav__link">
+<li class="md-nav__item md-nav__item--active">
+  
+
+  <!-- Active checkbox expands items contained within nested section -->
+  <input
+    class="md-nav__toggle md-toggle"
+    data-md-toggle="toc"
+    type="checkbox"
+    id="__toc"
+  />
+
+  <!-- Hack: see partials/toc.html for more information -->
+  
+
+  <!-- Render table of contents, if not empty -->
+  
+  <a href="./" class="md-nav__link md-nav__link--active">
     Get Wallet Transaction Details - GET wallet/transactions/details/
   </a>
+
+  <!-- Show table of contents -->
+  
 </li>
+
+<!-- Main navigation item -->
    
 
 <!-- Determine class according to state -->
@@ -1242,7 +1262,7 @@
 
 
 <!-- Determine class according to state -->
-   
+ 
 
 <!-- Main navigation item with nested items -->
 
@@ -1251,7 +1271,7 @@
 
 
 <!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<li class="md-nav__item md-nav__item--nested">
   <!-- Active checkbox expands items contained within nested section -->
    
   <input
@@ -1259,7 +1279,7 @@
     data-md-toggle="__nav_9"
     type="checkbox"
     id="__nav_9"
-    checked
+    
   />
   
 
@@ -1294,35 +1314,15 @@
    
 
 <!-- Determine class according to state -->
-   
+ 
 
 <!-- Main navigation item with nested items -->
 
-<li class="md-nav__item md-nav__item--active">
-  
-
-  <!-- Active checkbox expands items contained within nested section -->
-  <input
-    class="md-nav__toggle md-toggle"
-    data-md-toggle="toc"
-    type="checkbox"
-    id="__toc"
-  />
-
-  <!-- Hack: see partials/toc.html for more information -->
-  
-
-  <!-- Render table of contents, if not empty -->
-  
-  <a href="./" class="md-nav__link md-nav__link--active">
+<li class="md-nav__item">
+  <a href="../getTransaction/" class="md-nav__link">
     Get transaction - GET /transaction/:hash
   </a>
-
-  <!-- Show table of contents -->
-  
 </li>
-
-<!-- Main navigation item -->
    
 
 <!-- Determine class according to state -->
@@ -1595,24 +1595,26 @@
               
                 
                 
-                  <h1>Get transaction - GET /transaction/:hash</h1>
+                  <h1>Get Wallet Transaction Details - GET wallet/transactions/details/</h1>
                 
                 <h6>Endpoint</h6>
-
 <p id="endpoint"></p>
-<p>HTTP Method: <strong>GET</strong></p>
-<p>Returns a transaction by the transaction hash.
-<input class="md-input" placeholder="Enter Hash" id="hash"></input><br/><br/>
+
+<p>HTTP Method: <strong>GET</strong>
+<br/>
+<br/>
+Returns a set of transactions history of the addresses.</p>
+<p><input class="md-input" placeholder="Enter Address" id="address" width="100"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transaction/${document.getElementById("hash").value || "0x26866BB263593D024A92103646C48CF35A2B1BFCC49B087915B85DB14A432B373569D56F576242354328A31BF0102A0A78CB806CF6E25D88D7981367833631B7"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header?height=1`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/transaction/${document.getElementById("hash").value || "0x26866BB263593D024A92103646C48CF35A2B1BFCC49B087915B85DB14A432B373569D56F576242354328A31BF0102A0A78CB806CF6E25D88D7981367833631B7"}`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header?height=1`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transaction/${document.getElementById("hash").value || "0x26866BB263593D024A92103646C48CF35A2B1BFCC49B087915B85DB14A432B373569D56F576242354328A31BF0102A0A78CB806CF6E25D88D7981367833631B7"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header?height=1`
                 })
         }).catch((err) => {
             console.log(err)
@@ -1620,24 +1622,25 @@
     }
 </script>
 <p id="showResult"></p>
+
 <table>
 <thead>
 <tr>
-<th>Query String</th>
+<th>Parameter</th>
 <th>Explanation</th>
 <th>Example</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>hash</td>
-<td>The hash of the transaction to get</td>
-<td>0x26866BB263593D024A92103646C48CF35A2B1BFCC49B087915B85DB14A432B373569D56F576242354328A31BF0102A0A78CB806CF6E25D88D7981367833631B7</td>
+<td>address</td>
+<td>address to query.</td>
+<td>boa1xzgenes5cf8xel37fz79gzs49v56znllk7jw7qscjwl5p6a9zxk8zaygm67</td>
 </tr>
 </tbody>
 </table>
 <p>Example Response JSON:<br/>
-{"inputs":[],"outputs":[{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}},{"type":0,"value":"610000000000000","lock":{"type":0,"bytes":"kZnmFMJObP4+SLxUChUrKaFP/7ek7wIYk79A66URrHE="}}],"payload":"","lock_height":"0"}</p>
+{"height":"1","hash":"0x4e91f7276dec449f423b629727a7b430898c53c79f8d5f97d014941492f1229db5042c4cdc943c9f05d2c821966a0993860a8c9449a9f6dc96411ffae7ed34f9","merkle_root":"0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","time_stamp":1637738673}</p>
                 
               
               
@@ -1712,7 +1715,7 @@
       <!-- Link to previous page -->
       
         <a
-          href="../latestTransactions/"
+          href="../walletPendingTransactions/"
           class="md-footer__link md-footer__link--prev"
           rel="prev"
         >
@@ -1724,7 +1727,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Get Latest transactions - GET /latest-transactions
+              Get Wallet Pending Transactions - GET wallet/transactions/pending/:address
             </div>
           </div>
         </a>
@@ -1733,7 +1736,7 @@
       <!-- Link to next page -->
       
         <a
-          href="../getTransactionFee/"
+          href="../walletPendingTransactionsOverview/"
           class="md-footer__link md-footer__link--next"
           rel="next"
         >
@@ -1742,7 +1745,7 @@
               <span class="md-footer__direction">
                 Next
               </span>
-              Get transaction fee -GET /transaction/fees/:tx_size
+              Get Wallet Pending Transactions Overview - GET wallet/transactions/pending/overview
             </div>
           </div>
           <div class="md-footer__button md-icon">
