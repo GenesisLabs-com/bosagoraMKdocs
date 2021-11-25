@@ -1600,23 +1600,23 @@
                 <h6>Endpoint</h6>
 <p id="endpoint"></p>
 
-<p>HTTP Method: <strong>GET</strong></p>
-<!-- Returns proposals of the ledger. -->
-<!-- <input class="md-input" placeholder="Enter Page" id="page" width="100"></input><br/> -->
-<p><input class="md-input" placeholder="Enter pageSize" id="pageSize"></input><br/><br/>
+<p>HTTP Method: <strong>GET</strong>
+<br/><br/>
+Returns Block Validator</p>
+<p><input class="md-input" placeholder="Enter height" id="height"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/block/validators?height=${document.getElementById("pageSize").value || "3"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/block/validators?height=${document.getElementById("height").value || "3"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/block/validators?height=${document.getElementById("pageSize").value || "3"}`)
-        // ${document.getElementById("page").value || "0"}&pageSize=${document.getElementById("pageSize").value || "6"}`)
+        fetch(`https://dev-stoa-boascan.bosagora.com/block/validators?height=${document.getElementById("height").value || "3"}`)
+        // ${document.getElementById("page").value || "0"}&size=${document.getElementById("size").value || "6"}`)
         .then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/block/validators?height=${document.getElementById("pageSize").value || "3"}`
-                // ${document.getElementById("page").value || "0"}&pageSize=${document.getElementById("pageSize").value || "6"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/block/validators?height=${document.getElementById("height").value || "3"}`
+                // ${document.getElementById("page").value || "0"}&size=${document.getElementById("size").value || "6"}`
                 })
         }).catch((err) => {
             console.log(err)
@@ -1634,14 +1634,9 @@
 </thead>
 <tbody>
 <tr>
-<td>page</td>
-<td>page number</td>
-<td>1</td>
-</tr>
-<tr>
-<td>page size</td>
-<td>Number of records in a page</td>
-<td>6</td>
+<td>height</td>
+<td>block height</td>
+<td>3</td>
 </tr>
 </tbody>
 </table>

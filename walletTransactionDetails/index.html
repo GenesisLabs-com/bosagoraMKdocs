@@ -1603,18 +1603,18 @@
 <p>HTTP Method: <strong>GET</strong>
 <br/>
 <br/>
-Returns a set of transactions history of the addresses.</p>
-<p><input class="md-input" placeholder="Enter Address" id="address" width="100"></input><br/><br/>
+Returns a set of transactions details.</p>
+<p><input class="md-input" placeholder="Enter height" id="height" width="100"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header?height=1`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header?height=${document.getElementById("height").value ||"1"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header?height=1`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header?height=${document.getElementById("height").value ||"1"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header?height=1`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/wallet/blocks/header?height=${document.getElementById("height").value ||"1"}`
                 })
         }).catch((err) => {
             console.log(err)
@@ -1633,9 +1633,9 @@ Returns a set of transactions history of the addresses.</p>
 </thead>
 <tbody>
 <tr>
-<td>address</td>
-<td>address to query.</td>
-<td>boa1xzgenes5cf8xel37fz79gzs49v56znllk7jw7qscjwl5p6a9zxk8zaygm67</td>
+<td>height</td>
+<td>block height</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
