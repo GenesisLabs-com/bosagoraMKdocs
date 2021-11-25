@@ -12,6 +12,10 @@ nav:
   - Validators::
       - Get Validators - GET /validators: getValidators.md 
       - Get Validators - GET /validators/:address: getValidatorAddress.md 
+      - Get Validators - GET /validators/missed-blocks: getValidatorMissedBlocks.md 
+      - Get Validators - GET /validators/block_validator: getBlockValidator.md 
+      - Get Validators - GET /validators/validator_votes: getValidatorVotes.md 
+      - Get Validators - GET /validators/validator_rewards: getValidatorRewards.md 
 
   - Wallet::
       - Get Wallet Transaction History - GET /wallet/transactions/history/:address: walletTransactionHistory.md 
@@ -19,7 +23,9 @@ nav:
       - Get Wallet Block Header - GET /wallet/blocks/header: walletBlockHeader.md 
       - Get Wallet UTXO - GET /wallet/utxo/:address: walletUtxo.md 
       - Get Wallet Balance - GET /wallet/balance/:address: walletBalance.md 
-      - Get Wallet Pending Transactions - GET /wallet/transactions/pending/:address: walletPendingTransactions.md 
+      - Get Wallet Pending Transactions - GET wallet/transactions/pending/:address: walletPendingTransactions.md 
+      - Get Wallet Transaction Details - GET wallet/transactions/details/: walletTransactionDetails.md 
+      - Get Wallet Pending Transactions Overview - GET wallet/transactions/pending/overview: walletPendingTransactionsOverview.md 
 
   - Holders::
       - Get BOA Holders - GET /holders : getHolders.md 
@@ -28,6 +34,7 @@ nav:
       
   - Fee::
       - Get average fee chart - GET /average_fee_chart : averageFeeChart.md 
+      - Get transaction fee by size - GET /transaction_fee_by_size : transactionFeeBySize.md 
 
   - Search::
       - Get search  - GET /search/hash : search.md 
@@ -46,6 +53,8 @@ nav:
 
   - UTXO::
       - Get utxo  - GET /utxo/:address : getUTXO.md 
+      - Get Wallet utxo  - GET /wallet/utxo/:address : getWalletUTXO.md 
+      - Get txhash utxo  - GET /txhash/:utxo : getTxHashUTXO.md 
       
   - Proposals::
       - Get proposal list  - GET /proposals : getProposals.md 
