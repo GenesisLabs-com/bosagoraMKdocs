@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <!-- <a href="/transactions">Transactions</a> -->
           <!-- <span class="md-ellipsis">
-             Get transaction fee -GET /transaction/fees/:tx_size 
+             getTransactionFee 
           </span> -->
         </div>
       </div>
@@ -808,7 +808,7 @@
 
 <li class="md-nav__item">
   <a href="../walletPendingTransactionsOverview/" class="md-nav__link">
-    Get Wallet Pending Transactions Overview - GET wallet/transactions/pending/overview
+    Get Wallet Pending Transactions Overview - GET transactions/pending/overview
   </a>
 </li>
   
@@ -1242,7 +1242,7 @@
 
 
 <!-- Determine class according to state -->
-   
+ 
 
 <!-- Main navigation item with nested items -->
 
@@ -1251,7 +1251,7 @@
 
 
 <!-- Render item with nested items -->
-<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<li class="md-nav__item md-nav__item--nested">
   <!-- Active checkbox expands items contained within nested section -->
    
   <input
@@ -1259,7 +1259,7 @@
     data-md-toggle="__nav_9"
     type="checkbox"
     id="__nav_9"
-    checked
+    
   />
   
 
@@ -1303,38 +1303,6 @@
     Get transaction - GET /transaction/:hash
   </a>
 </li>
-   
-
-<!-- Determine class according to state -->
-   
-
-<!-- Main navigation item with nested items -->
-
-<li class="md-nav__item md-nav__item--active">
-  
-
-  <!-- Active checkbox expands items contained within nested section -->
-  <input
-    class="md-nav__toggle md-toggle"
-    data-md-toggle="toc"
-    type="checkbox"
-    id="__toc"
-  />
-
-  <!-- Hack: see partials/toc.html for more information -->
-  
-
-  <!-- Render table of contents, if not empty -->
-  
-  <a href="./" class="md-nav__link md-nav__link--active">
-    Get transaction fee -GET /transaction/fees/:tx_size
-  </a>
-
-  <!-- Show table of contents -->
-  
-</li>
-
-<!-- Main navigation item -->
    
 
 <!-- Determine class according to state -->
@@ -1595,7 +1563,7 @@
               
                 
                 
-                  <h1>Get transaction fee -GET /transaction/fees/:tx_size</h1>
+                  <h1>getTransactionFee</h1>
                 
                 <h6>Endpoint</h6>
 
@@ -1706,54 +1674,6 @@
 <footer class="md-footer">
 
   <!-- Link to previous and/or next page -->
-  
-    <nav
-      class="md-footer__inner md-grid"
-      aria-label="Footer"
-    >
-
-      <!-- Link to previous page -->
-      
-        <a
-          href="../getTransaction/"
-          class="md-footer__link md-footer__link--prev"
-          rel="prev"
-        >
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Get transaction - GET /transaction/:hash
-            </div>
-          </div>
-        </a>
-      
-
-      <!-- Link to next page -->
-      
-        <a
-          href="../getTransactionStatus/"
-          class="md-footer__link md-footer__link--next"
-          rel="next"
-        >
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Get transaction status - GET /transaction/status/:hash
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
 
   <!-- Further information -->

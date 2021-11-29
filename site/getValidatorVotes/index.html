@@ -828,7 +828,7 @@
 
 <li class="md-nav__item">
   <a href="../walletPendingTransactionsOverview/" class="md-nav__link">
-    Get Wallet Pending Transactions Overview - GET wallet/transactions/pending/overview
+    Get Wallet Pending Transactions Overview - GET transactions/pending/overview
   </a>
 </li>
   
@@ -1331,18 +1331,6 @@
 <!-- Main navigation item with nested items -->
 
 <li class="md-nav__item">
-  <a href="../getTransactionFee/" class="md-nav__link">
-    Get transaction fee -GET /transaction/fees/:tx_size
-  </a>
-</li>
-   
-
-<!-- Determine class according to state -->
- 
-
-<!-- Main navigation item with nested items -->
-
-<li class="md-nav__item">
   <a href="../getTransactionStatus/" class="md-nav__link">
     Get transaction status - GET /transaction/status/:hash
   </a>
@@ -1639,6 +1627,15 @@ Returns Ballot of the validator
 </tbody>
 </table>
 <p>Example Response JSON:<br/></p>
+<p>{
+        "proposal_id": "469008972006",
+        "tx_hash": "0x2fe87cd6f3012563efce675b4860fb585f54f5aac4482bd7fbaf4d690441dd10913da3af4a79ccc2ae5840607053d960acd9918539b230de83cf499ad74c0025",
+        "sequence": 120,
+        "proposal_type": "Fund",
+        "proposal_title": "Save the world",
+        "ballot_answer": "",
+        "full_count": 1
+    }</p>
                 
               
               
