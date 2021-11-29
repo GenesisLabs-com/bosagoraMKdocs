@@ -808,7 +808,7 @@
 
 <li class="md-nav__item">
   <a href="../walletPendingTransactionsOverview/" class="md-nav__link">
-    Get Wallet Pending Transactions Overview - GET wallet/transactions/pending/overview
+    Get Wallet Pending Transactions Overview - GET transactions/pending/overview
   </a>
 </li>
   
@@ -1311,18 +1311,6 @@
 <!-- Main navigation item with nested items -->
 
 <li class="md-nav__item">
-  <a href="../getTransactionFee/" class="md-nav__link">
-    Get transaction fee -GET /transaction/fees/:tx_size
-  </a>
-</li>
-   
-
-<!-- Determine class according to state -->
- 
-
-<!-- Main navigation item with nested items -->
-
-<li class="md-nav__item">
   <a href="../getTransactionStatus/" class="md-nav__link">
     Get transaction status - GET /transaction/status/:hash
   </a>
@@ -1604,7 +1592,7 @@
 <p>HTTP Method: <strong>GET</strong>
 <br/><br/>
 Return txHash of the utxo.
-<input class="md-input" placeholder="Enter address" id="address" width="100"></input><br/><br/>
+<input class="md-input" placeholder="Enter hash" id="address" width="100"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
    document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/txhash/${document.getElementById("address").value ||"0x85ee638b628d421b06732fa5f26441289c655895bd3f7753111af98dce91bb9b2d2e1e7c851d30374155cd2638de2912c8a55c22b59d230d5077f6c1efdfa51f"}`
