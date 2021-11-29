@@ -25,7 +25,7 @@ nav:
       - Get Wallet Balance - GET /wallet/balance/:address: walletBalance.md 
       - Get Wallet Pending Transactions - GET wallet/transactions/pending/:address: walletPendingTransactions.md 
       - Get Wallet Transaction Details - GET wallet/transactions/details/: walletTransactionDetails.md 
-      - Get Wallet Pending Transactions Overview - GET wallet/transactions/pending/overview: walletPendingTransactionsOverview.md 
+      - Get Wallet Pending Transactions Overview - GET transactions/pending/overview: walletPendingTransactionsOverview.md 
 
   - Holders::
       - Get BOA Holders - GET /holders : getHolders.md 
@@ -47,7 +47,7 @@ nav:
   - Transactions::
       - Get Latest transactions - GET /latest-transactions : latestTransactions.md
       - Get transaction - GET /transaction/:hash : getTransaction.md
-      - Get transaction fee -GET /transaction/fees/:tx_size: getTransactionFee.md
+    #   - Get transaction fee -GET /transaction/fees/:tx_size: getTransactionFee.md
       - Get transaction status - GET /transaction/status/:hash: getTransactionStatus.md
       - Get pending transactions - GET /transaction/pending/:hash: getPendingTransaction.md
 
@@ -64,7 +64,7 @@ nav:
 theme:
   name: material
   custom_dir: docs/overrides/
-  logo: 'https://i.imgur.com/H1Dfq7A.png'
+  logo: img/logo.png
 
 extra_css:
   - stylesheets/extra.css

@@ -31,8 +31,6 @@ HTTP Method: **GET**
 | Query String | Explanation    | Example                            |
 | --------- | ------------ | ------------------------------------ |
 | proposal id      | Id of the requested proposal | 469008972006 |
-| page      | page number | 1 |
-| page size      | Number of records in a page | 6 |
 
 Example Request JSON:<br/>
 

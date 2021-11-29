@@ -29,3 +29,13 @@ Returns Ballot of the validator
 
 Example Response JSON:<br/>
 
+{
+        "proposal_id": "469008972006",
+        "tx_hash": "0x2fe87cd6f3012563efce675b4860fb585f54f5aac4482bd7fbaf4d690441dd10913da3af4a79ccc2ae5840607053d960acd9918539b230de83cf499ad74c0025",
+        "sequence": 120,
+        "proposal_type": "Fund",
+        "proposal_title": "Save the world",
+        "ballot_answer": "",
+        "full_count": 1
+    }
+

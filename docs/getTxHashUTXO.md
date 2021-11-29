@@ -5,7 +5,7 @@
 HTTP Method: **GET**
 <br/><br/>
 Return txHash of the utxo.
-<input class="md-input" placeholder="Enter address" id="address" width="100"></input><br/><br/>
+<input class="md-input" placeholder="Enter hash" id="address" width="100"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button>
 
 <script>

@@ -7,14 +7,14 @@ Returns Latest blocks of the ledger.
 <button class="md-button" onclick="tryNow()">Try Now</button>
 
 <script>
-   document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/latest-blocks?page=0&pageSize=6"
+   document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/latest-blocks?page=1&pageSize=6"
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch("https://dev-stoa-boascan.bosagora.com/latest-blocks?page=0&pageSize=6").then((res) => {
+        fetch("https://dev-stoa-boascan.bosagora.com/latest-blocks?page=1&pageSize=6").then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/latest-blocks?page=0pageSize=6"
+                document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/latest-blocks?page=1pageSize=6"
                 })
         }).catch((err) => {
             console.log(err)

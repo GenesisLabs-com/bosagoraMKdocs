@@ -5,17 +5,18 @@ HTTP Method: **GET**
 
 Returns BOA statistics of last 24 hours.
 <br/>
+<input class="md-input" placeholder="Enter currency" id="currency"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button>
 
 <script>
-   document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/coinmarketchart?currency=usd"
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/coinmarketchart?currency=${document.getElementById("currency").value || "usd"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch("https://dev-stoa-boascan.bosagora.com/coinmarketchart?currency=usd").then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/coinmarketchart?currency=${document.getElementById("currency").value || "usd"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/coinmarketchart?currency=usd"
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/coinmarketchart?currency=${document.getElementById("currency").value || "usd"}`
                 })
         }).catch((err) => {
             console.log(err)

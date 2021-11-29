@@ -23,10 +23,7 @@ Returns the highest block height stored in Stoa
     }
 </script>
 <p id="showResult"></p>
-| Query String | Explanation    | Example                            | 
-| --------- | ------------ | ------------------------------------ |
-| page      | page number | 1 |
-| page size      | Number of records in a page | 6 |
+
 
 Example Response JSON:<br/>
 "5"

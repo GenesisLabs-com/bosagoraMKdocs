@@ -124,8 +124,8 @@
 
 <h1>BOSAGORA</h1>
 <!-- <img
-  style="width: 100%; height: auto"
-  src="https://i.imgur.com/H1Dfq7A.png"
+  style="width: 100%; height: 100px"
+  src="../../../img/logo.png"
   alt="logo"
 /> -->
 
@@ -309,8 +309,8 @@
 
 <h1>BOSAGORA</h1>
 <!-- <img
-  style="width: 100%; height: auto"
-  src="https://i.imgur.com/H1Dfq7A.png"
+  style="width: 100%; height: 100px"
+  src="../../../img/logo.png"
   alt="logo"
 /> -->
 
@@ -1601,19 +1601,20 @@
 
 <p id="endpoint"></p>
 
-<p>HTTP Method: <strong>GET</strong></p>
-<p>Returns a set of UTXOs of the address.
-<input class="md-input" placeholder="Enter Address" id="address" width="100"></input><br/><br/>
+<p>HTTP Method: <strong>GET</strong>
+<br/><br/>
+Return txHash of the utxo.
+<input class="md-input" placeholder="Enter address" id="address" width="100"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/txhash/0xf04aa506cef588ff63a08d5d11b8b82defee73ee8d83dc051d8712ad7f0b5992a2a855b8a452766b9bd8414ca77c6a85287b52ec4c61fa36ae97f19c41d88660`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/txhash/${document.getElementById("address").value ||"0x85ee638b628d421b06732fa5f26441289c655895bd3f7753111af98dce91bb9b2d2e1e7c851d30374155cd2638de2912c8a55c22b59d230d5077f6c1efdfa51f"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/txhash/0xf04aa506cef588ff63a08d5d11b8b82defee73ee8d83dc051d8712ad7f0b5992a2a855b8a452766b9bd8414ca77c6a85287b52ec4c61fa36ae97f19c41d88660`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/txhash/${document.getElementById("address").value ||"0x85ee638b628d421b06732fa5f26441289c655895bd3f7753111af98dce91bb9b2d2e1e7c851d30374155cd2638de2912c8a55c22b59d230d5077f6c1efdfa51f"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/txhash/0xf04aa506cef588ff63a08d5d11b8b82defee73ee8d83dc051d8712ad7f0b5992a2a855b8a452766b9bd8414ca77c6a85287b52ec4c61fa36ae97f19c41d88660`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/txhash/${document.getElementById("address").value ||"0x85ee638b628d421b06732fa5f26441289c655895bd3f7753111af98dce91bb9b2d2e1e7c851d30374155cd2638de2912c8a55c22b59d230d5077f6c1efdfa51f"}`
                 })
         }).catch((err) => {
             console.log(err)
@@ -1632,9 +1633,9 @@
 </thead>
 <tbody>
 <tr>
-<td>address</td>
-<td>The public address to receive UTXO</td>
-<td>boa1xzgenes5cf8xel37fz79gzs49v56znllk7jw7qscjwl5p6a9zxk8zaygm67</td>
+<td>txhash</td>
+<td>Txhash UTXO</td>
+<td>0x85ee638b628d421b06732fa5f26441289c655895bd3f7753111af98dce91bb9b2d2e1e7c851d30374155cd2638de2912c8a55c22b59d230d5077f6c1efdfa51f</td>
 </tr>
 </tbody>
 </table>

@@ -10,14 +10,14 @@ Returns a set of transactions history of the addresses.
 <button class="md-button" onclick="tryNow()">Try Now</button>
 
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/wallet/transactions/history/${document.getElementById("address").value || "boa1xzgenes5cf8xel37fz79gzs49v56znllk7jw7qscjwl5p6a9zxk8zaygm67"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transactions/history/${document.getElementById("address").value || "boa1xzgenes5cf8xel37fz79gzs49v56znllk7jw7qscjwl5p6a9zxk8zaygm67"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/wallet/transactions/history/${document.getElementById("address").value || "boa1xzgenes5cf8xel37fz79gzs49v56znllk7jw7qscjwl5p6a9zxk8zaygm67"}`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/transactions/history/${document.getElementById("address").value || "boa1xzgenes5cf8xel37fz79gzs49v56znllk7jw7qscjwl5p6a9zxk8zaygm67"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/wallet/transactions/history/${document.getElementById("address").value || "boa1xzgenes5cf8xel37fz79gzs49v56znllk7jw7qscjwl5p6a9zxk8zaygm67"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/transactions/history/${document.getElementById("address").value || "boa1xzgenes5cf8xel37fz79gzs49v56znllk7jw7qscjwl5p6a9zxk8zaygm67"}`
                 })
         }).catch((err) => {
             console.log(err)
