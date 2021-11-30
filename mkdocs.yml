@@ -65,7 +65,7 @@ nav:
 theme:
   name: material
   custom_dir: docs/overrides/
-  logo: img/logo.png
+  logo: docs/img/logo.png
 
 extra_css:
   - stylesheets/extra.css

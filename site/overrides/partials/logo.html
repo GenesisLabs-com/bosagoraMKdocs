@@ -22,11 +22,6 @@
 
 <!-- Logo -->
 {% if config.theme.logo %}
-<h1>BOSAGORA</h1>
-<!-- <img
-  style="width: 100%; height: 100px"
-  src="../../../img/logo.png"
-  alt="logo"
-/> -->
+<img src="{{ config.theme.logo | url }}" alt="logo" />
 {% else %} {% set icon = config.theme.icon.logo or "material/library" %} {%
 include ".icons/" ~ icon ~ ".svg" %} {% endif %}
