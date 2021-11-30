@@ -495,8 +495,20 @@
 <!-- Main navigation item with nested items -->
 
 <li class="md-nav__item">
-  <a href="../getBlockTransactions/" class="md-nav__link">
-    Get Block Transactions -  GET /block-transactions
+  <a href="../getBlockTransactionsByHash/" class="md-nav__link">
+    Get Block Transactions -  GET /block-transactions_by_Hash
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getBlockTransactionsByHeight/" class="md-nav__link">
+    Get Block Transactions -  GET /block-transactions_by_Height
   </a>
 </li>
   
@@ -1611,6 +1623,7 @@ If an address was provided, return the validator data of the address if it exist
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 
 <table>
