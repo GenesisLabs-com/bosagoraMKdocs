@@ -145,7 +145,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <!-- <a href="/transactions">Transactions</a> -->
           <!-- <span class="md-ellipsis">
-             Get Block Transactions -  GET /block-transactions 
+             Get Block Transactions -  GET /block-transactions_by_Height 
           </span> -->
         </div>
       </div>
@@ -490,6 +490,18 @@
    
 
 <!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getBlockTransactionsByHash/" class="md-nav__link">
+    Get Block Transactions -  GET /block-transactions_by_Hash
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
    
 
 <!-- Main navigation item with nested items -->
@@ -511,7 +523,7 @@
   <!-- Render table of contents, if not empty -->
   
   <a href="./" class="md-nav__link md-nav__link--active">
-    Get Block Transactions -  GET /block-transactions
+    Get Block Transactions -  GET /block-transactions_by_Height
   </a>
 
   <!-- Show table of contents -->
@@ -1583,46 +1595,34 @@
               
                 
                 
-                  <h1>Get Block Transactions -  GET /block-transactions</h1>
+                  <h1>Get Block Transactions -  GET /block-transactions_by_Height</h1>
                 
                 <h6>Endpoint</h6>
 
 <p id="endpoint"></p>
 
 <p>HTTP Method: <strong>GET</strong>
-Returns transactions of block.
-<input class="md-input" placeholder="Enter Hash" id="hash"></input><br/>
+<br/><br/>
+Returns transactions of block by Height.
 <input class="md-input" placeholder="Enter Height" id="height"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-    let query
-   if(document.getElementById("hash").value != "" || document.getElementById("hash").value != undefined){
-       query=`https://dev-stoa-boascan.bosagora.com/block-transactions?hash=${document.getElementById("hash").value || "0xe928f7db6db61a3784a61f631e29e2157a8444b659ca5d782e5c6266ff09f8e5cfdd0fad939b277532cb0b4c88ba2bb5bd45ecc2cd71612ceadc0671752027cd"}`
-   }
-   else{
-       query=`https://dev-stoa-boascan.bosagora.com/block-transactions?height=${document.getElementById("height").value || "1"}` 
-   }
-   document.getElementById("endpoint").innerHTML = query
-   function tryNow(){
-       let query
-   if(document.getElementById("hash").value != ""){
-       query=`https://dev-stoa-boascan.bosagora.com/block-transactions?hash=${document.getElementById("hash").value || "0xe928f7db6db61a3784a61f631e29e2157a8444b659ca5d782e5c6266ff09f8e5cfdd0fad939b277532cb0b4c88ba2bb5bd45ecc2cd71612ceadc0671752027cd"}`
-   }
-   else{
-       query=`https://dev-stoa-boascan.bosagora.com/block-transactions?height=${document.getElementById("height").value || "1"}` 
-   }
-   document.getElementById("endpoint").innerHTML = query
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/block-transactions?height=${document.getElementById("height").value || "1"}`
+    function tryNow(){
         document.getElementById("showResult").innerHTML =""
-        fetch(query).then((res) => {
+        document.getElementById("endpoint").innerHTML =""
+        fetch(`https://dev-stoa-boascan.bosagora.com/block-transactions?height=${document.getElementById("height").value || "1"}`).then((res) => {
             res.json().then((res) => {
-                document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =query
+                document.getElementById("showResult").innerHTML = JSON.stringify(res[0])
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/block-transactions?height=${document.getElementById("height").value || "1"}`
                 })
         }).catch((err) => {
             console.log(err)
         })
     }
 </script>
+
+<h6>Result</h6>
 <p id="showResult"></p>
 
 <table>
@@ -1637,12 +1637,7 @@ Returns transactions of block.
 <tr>
 <td>height</td>
 <td>height of block</td>
-<td>10</td>
-</tr>
-<tr>
-<td>hash</td>
-<td>hash of block</td>
-<td>0xe928f7db6db61a3784a61f631e29e2157a8444b659ca5d782e5c6266ff09f8e5cfdd0fad939b277532cb0b4c88ba2bb5bd45ecc2cd71612ceadc0671752027cd</td>
+<td>1</td>
 </tr>
 </tbody>
 </table>
@@ -1722,7 +1717,7 @@ Returns transactions of block.
       <!-- Link to previous page -->
       
         <a
-          href="../getBlockEnrollments/"
+          href="../getBlockTransactionsByHash/"
           class="md-footer__link md-footer__link--prev"
           rel="prev"
         >
@@ -1734,7 +1729,7 @@ Returns transactions of block.
               <span class="md-footer__direction">
                 Previous
               </span>
-              Get Block Enrollments -  GET /block-enrollments
+              Get Block Transactions -  GET /block-transactions_by_Hash
             </div>
           </div>
         </a>

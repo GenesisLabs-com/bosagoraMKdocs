@@ -495,8 +495,20 @@
 <!-- Main navigation item with nested items -->
 
 <li class="md-nav__item">
-  <a href="../getBlockTransactions/" class="md-nav__link">
-    Get Block Transactions -  GET /block-transactions
+  <a href="../getBlockTransactionsByHash/" class="md-nav__link">
+    Get Block Transactions -  GET /block-transactions_by_Hash
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getBlockTransactionsByHeight/" class="md-nav__link">
+    Get Block Transactions -  GET /block-transactions_by_Height
   </a>
 </li>
   
@@ -1595,17 +1607,17 @@
 <input class="md-input" placeholder="Enter pageSize" id="pageSize"></input><br/><br/> -->
 <p><button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/proposal/voting_details/${document.getElementById("proposalId").value || "469008972006"}`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/proposal/${document.getElementById("proposalId").value || "469008972006"}`
 //    /?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "6"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/proposal/voting_details/${document.getElementById("proposalId").value || "469008972006"}`)
+        fetch(`https://dev-stoa-boascan.bosagora.com/proposal/${document.getElementById("proposalId").value || "469008972006"}`)
         // /?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "6"}`)
         .then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/voting_details/${document.getElementById("proposalId").value || "469008972006"}`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/${document.getElementById("proposalId").value || "469008972006"}`
                 // /?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "6"}`
                 })
         }).catch((err) => {
@@ -1613,6 +1625,7 @@
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 <table>
 <thead>
@@ -1631,9 +1644,9 @@
 </tbody>
 </table>
 <p>Example Request JSON:<br/></p>
-<p>{
-    "address":"boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2","sequence":106,"hash":"0x9ae101d4ff95c9e765145be22adec7fd0af2bc2302d4fcd65be0add852a8e6317a572cca4af247a2943e50c303e048dea380b1220e8011d59a807c80d27c4b20","ballot_answer":"No","voting_time":1633007107,"voter_utxo_key":"0xd58cc81e7d669a40875413e4974927d4694d6b59f5bceda20e84bcf2133c9ebff95f62c7a62ac65e879c3a475abdd56d2130e50eb767ab4c53cdd54a14b5e712","full_count":2},{"address":"boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2","sequence":106,"hash":"0x228179890f9c2132496174cbbdbe30f3a46349393f27b2ca5ad0a8125cdb4e368db008f15e5434887dc4f6ff653f552fa3b1270b36aefb626e4302c7738b6f15","ballot_answer":"No","voting_time":1633084353,"voter_utxo_key":"0xdc5e2235b98bd9286fd7e5269d66593953105ec89b2ff3fa037a435a937101ce770cac45fe5e31bdc990e10b687e96e50603ddcd05facf4cf9ebbed5c15f175a","full_count":2
-}</p>
+<p>{"proposal_title":"Save the
+world","proposal_id":"469008972006","detail":"테스트","proposal_tx_hash":"0x294ead078b62f17a502c0e26a44815605c26c7fe8f707850db9e7c3e1bc07bb73666f1a56942d845036e0f2c83e2bf040c9087916b8bde3bca621dbca9c11e12","fee_tx_hash":"0x8b6a2e1ecc3616ad63c73d606c4019407ebfd06a122519e7bd88d99af92d19d9621323d7c2e68593053a570522b6bc8575d1ee45a74ee38726f297a5ce08e33d","proposer_name":"
+BOANode","block_height":876,"fund_amount":10000000000000,"proposal_fee":100000000000,"proposal_type":"Fund","vote_start_height":30,"voting_start_date":1630195200,"vote_end_height":200,"voting_end_date":1630627200,"proposal_status":"Closed","proposal_result":"Pending","proposal_date":1629349706,"pre_evaluation_start_time":1629244800,"pre_evaluation_end_time":1629244800,"ave_pre_evaluation_score":7,"proposer_address":"boa1xrw66w303s5x05ej9uu6djc54kue29j72kah22xqqcrtqj57ztwm5uh524e","proposal_fee_address":"boa1xrzwvvw6l6d9k84ansqgs9yrtsetpv44wfn8zm9a7lehuej3ssskxth867s","urls":[{"url":"https://s3.ap-northeast-2.amazonaws.com/com.kosac.defora.beta.upload-image/BOASCAN_Requirements_Documentation_Version1_0_EN_copy_fb69a8a7d5.pdf"}],"total_validators":6,"total_yes_voted":0,"total_no_voted":0,"total_abstain_voted":0,"total_not_voted":5,"yes_percentage":"0.00","no_percentage":"0.00","abstain_percentage":"0.00","not_voted_percentage":"83.33","voted_percentage":"16.67","total_voted":1}</p>
                 
               
               

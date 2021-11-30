@@ -495,8 +495,20 @@
 <!-- Main navigation item with nested items -->
 
 <li class="md-nav__item">
-  <a href="../getBlockTransactions/" class="md-nav__link">
-    Get Block Transactions -  GET /block-transactions
+  <a href="../getBlockTransactionsByHash/" class="md-nav__link">
+    Get Block Transactions -  GET /block-transactions_by_Hash
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getBlockTransactionsByHeight/" class="md-nav__link">
+    Get Block Transactions -  GET /block-transactions_by_Height
   </a>
 </li>
   
@@ -1594,22 +1606,25 @@
 <br/>
 Returns Latest transactions of the ledger.
 <br/>
+<input class="md-input" placeholder="Enter page" id="page"></input><br/>
+<input class="md-input" placeholder="Enter pageSize" id="pageSize"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button></p>
 <script>
-   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/latest-transactions`
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/latest-transactions?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "20"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch(`https://dev-stoa-boascan.bosagora.com/latest-transactions`).then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/latest-transactions?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "20"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/latest-transactions`
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/latest-transactions?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "20"}`
                 })
         }).catch((err) => {
             console.log(err)
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 <table>
 <thead>
@@ -1633,7 +1648,7 @@ Returns Latest transactions of the ledger.
 </tbody>
 </table>
 <p>Example Response JSON:<br/>
-[{"height":"0","tx_hash":"0x26866bb263593d024a92103646c48cf35a2b1bfcc49b087915b85db14a432b373569d56f576242354328a31bf0102a0a78cb806cf6e25d88d7981367833631b7","type":0,"amount":"4880000000000000","tx_fee":"0","tx_size":"368","time_stamp":1609459200,"full_count":2},{"height":"0","tx_hash":"0xeb5e0004d046422c84ddb7b9d54a0eba484a41b5179beda0b3dd7c54c3fca609437a9c8ef16b5bfc2335d9b258eb68908757e0f1a4c725752598aaa962924551","type":1,"amount":"120000000000000","tx_fee":"0","tx_size":"278","time_stamp":1609459200,"full_count":2}]</p>
+[{"height":"6064","tx_hash":"0x93dfb7e1e93767f44ee7b802238eedf4e70ffdea8dc8829e98cb077081bc8464f45a15dd1647055b1c57a3137c6219738b834cb43929a96df6f91249eed05be3","type":"Payment","amount":"869062748983","tx_fee":"161700","tx_size":"231","time_stamp":1638255936,"status":"Confirmed","full_count":6932},{"height":"6063","tx_hash":"0xb45f21363b02731d97b0940e0915c59e2cf733f7a6de7e45bc42058d45f3685a4079a14ee407a3ce021373997d733ee026db7684c8535645ad36fbffe9777077","type":"Payment","amount":"962262964443","tx_fee":"161700","tx_size":"231","time_stamp":1638255932,"status":"Confirmed","full_count":6932},{"height":"6062","tx_hash":"0xf68e85c498f3ae63f05ab9bf99270516eb74bdcadba6fd4183a9218fe162d1912ca3b103684e70a8f6d5bbd3c941c0e98554e123933ce3d4b23e27d8f4ac6b3b","type":"Payment","amount":"6492215874550","tx_fee":"161700","tx_size":"231","time_stamp":1638255926,"status":"Confirmed","full_count":6932},{"height":"6061","tx_hash":"0xce6f42a7f4e6219dc8fe3d3682acfc99dd8ca32b869e8c220c1023d60dcbcec776ddf5234831b09527cbfb66da79e5ceb051d5ba676cb1b2e12e35a04f535d9e","type":"Payment","amount":"5331272155828","tx_fee":"161700","tx_size":"231","time_stamp":1638255922,"status":"Confirmed","full_count":6932},{"height":"6060","tx_hash":"0xcf89b18d777b3ef8cd86189cccd8cf5ace2c77fbb62aea6e03ae78bd39228801a76361cb33d166c524d75c53f872b34faed324fe1c3d43f430390eba41bb3f8f","type":"Payment","amount":"7005911902081","tx_fee":"534100","tx_size":"763","time_stamp":1638255916,"status":"Confirmed","full_count":6932},{"height":"6059","tx_hash":"0x450ff47997e3610d9fadf21714b9ff8ca10bb0a20a4d06d9660585ed2987f8ab765c28c64a36395e51283d63c4a8448ca21575528c7ac8e6a2dcc2d4b86cc5e6","type":"Payment","amount":"12532831719113","tx_fee":"534100","tx_size":"763","time_stamp":1638255912,"status":"Confirmed","full_count":6932},{"height":"6058","tx_hash":"0x944eda844d7ffa2041ff114a2287442acba145ec219b405fc83c234998302df46b0d6ea0acec3b27423ea7bfc13a139942f6bf9e1a3eb12dbccbba05f060cd6a","type":"Payment","amount":"1746022356254","tx_fee":"161700","tx_size":"231","time_stamp":1638255906,"status":"Confirmed","full_count":6932},{"height":"6057","tx_hash":"0x6e886eccd0b53211a3888b2d2cb1e01b89bb5b51c4a0337a36e9576abc3448b9c561249b411f106e46707f573ae0d08ac610ab06a4f48abe3b884cfaa5bf328a","type":"Payment","amount":"1312231203761","tx_fee":"347900","tx_size":"497","time_stamp":1638255902,"status":"Confirmed","full_count":6932},{"height":"6056","tx_hash":"0xe0728f6ed5498f335cab57e87024066b1c5ba5df26f6e9d0747db56006f9eab1d6b03852030ac688fe892ea82f681d570c153f62d8bfb694c0b72e84069ebd5b","type":"Payment","amount":"7757759588227","tx_fee":"161700","tx_size":"231","time_stamp":1638255896,"status":"Confirmed","full_count":6932},{"height":"6055","tx_hash":"0xedfcd4b025b7e186a3bfd3da669c61584d28e2a9d117a7dcfb7b01c6b7610fdc609a1a80bd172cf79f920833c4c61fad0884147a6c6a2fe33d778e87d2e85873","type":"Payment","amount":"860923866546","tx_fee":"161700","tx_size":"231","time_stamp":1638255892,"status":"Confirmed","full_count":6932},{"height":"6054","tx_hash":"0xec114f070c9fada1e66d00158434f2f1c1e853b4c590570b3baba8745e39cac0e77280ae7e2d4c1d1b24fbe87d809ed2aa03e6cd08daf5ebd14c257e46ff0641","type":"Payment","amount":"15881026306550","tx_fee":"254800","tx_size":"364","time_stamp":1638255886,"status":"Confirmed","full_count":6932},{"height":"6053","tx_hash":"0x4cd482deb98016ef7c85d9e0564b03df5b5c675dd68d26bf6fb5a7982e0b5c56656d38ebdf99c5483b335696869fdca2c34c69121b977a1400aa6bf12627bc36","type":"Payment","amount":"1914078187022","tx_fee":"161700","tx_size":"231","time_stamp":1638255882,"status":"Confirmed","full_count":6932},{"height":"6052","tx_hash":"0x25d837eb313bb3cf5f4a420149433122ada7fc63a3b2f9521fe99ffc494cec69a2d41fbcbd830df8ba6bf25ebea3d4a65162aa49ca01ae65e6cbabdff94c0e6f","type":"Payment","amount":"1897141190666","tx_fee":"254800","tx_size":"364","time_stamp":1638255876,"status":"Confirmed","full_count":6932},{"height":"6051","tx_hash":"0xa9e66a49b5e8ad7304fd0d008f4a8df551c6d27a1fba84811cdd05f0711028f62f655a6423a1befeba76501fc1e97366552826c5399b25a63ac80532e59a2880","type":"Payment","amount":"1812313135810","tx_fee":"161700","tx_size":"231","time_stamp":1638255872,"status":"Confirmed","full_count":6932},{"height":"6050","tx_hash":"0xc7cc1a05d71ac3559b151687e7590919ff351cf3b8846088f780177ac78bb39154f5aa229ca58a7bf4abb622c157eada5c05a195b76a11700248f6c233e42235","type":"Payment","amount":"1319275769660","tx_fee":"161700","tx_size":"231","time_stamp":1638255866,"status":"Confirmed","full_count":6932},{"height":"6049","tx_hash":"0x67a0541d2dd0681ca9a5fb788cf97db2c73bcb05e0e64230c210a742c7e091b3cadd971ca774ee6208f288885ad152c5abf336ed08f6566fe21b2a78b93e6ffb","type":"Payment","amount":"6298364669680","tx_fee":"347900","tx_size":"497","time_stamp":1638255862,"status":"Confirmed","full_count":6932},{"height":"6049","tx_hash":"0x92b0abb7b72742bc5cf1006c3471c91e086bb14d8a60937fa9addc3d7ce9f3cd2060796afe628a5cbdaf3ea6477bc9ce6f40f5189fa7bff58a9ce01b6cda8aa3","type":"Payment","amount":"16285441132790","tx_fee":"254800","tx_size":"364","time_stamp":1638255862,"status":"Confirmed","full_count":6932},{"height":"6048","tx_hash":"0x9249084063272e496158f893b296d1717714f79bf46ec91878712a0b926651f2963d1a5e1c4128c48126ad1405cbefaf79ff4d5225516c8288bd9048ce875ea2","type":"Coinbase","amount":"1995880537700","tx_fee":"0","tx_size":"301","time_stamp":1638255858,"status":"Confirmed","full_count":6932},{"height":"6048","tx_hash":"0xf05341394a2a46a787a76c9d7cb151328a1b585301466f8a19e74f378016e6a61c87cfb3b4170a1b38cbb328046eabf7d6064b1838625ff4ea2866f31f8b28ca","type":"Payment","amount":"3078372370435","tx_fee":"347900","tx_size":"497","time_stamp":1638255858,"status":"Confirmed","full_count":6932},{"height":"6047","tx_hash":"0x856723d142a158c4fc45f4767025ca4ae532cd9d0c5cffc647f8a56cb1923878c141b19316c9aca79e3f667bdfa3e700252cc413feb917e49cf8117dfe9b370e","type":"Payment","amount":"2642740408122","tx_fee":"441000","tx_size":"630","time_stamp":1638255846,"status":"Confirmed","full_count":6932}]</p>
                 
               
               

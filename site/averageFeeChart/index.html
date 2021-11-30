@@ -495,8 +495,20 @@
 <!-- Main navigation item with nested items -->
 
 <li class="md-nav__item">
-  <a href="../getBlockTransactions/" class="md-nav__link">
-    Get Block Transactions -  GET /block-transactions
+  <a href="../getBlockTransactionsByHash/" class="md-nav__link">
+    Get Block Transactions -  GET /block-transactions_by_Hash
+  </a>
+</li>
+   
+
+<!-- Determine class according to state -->
+ 
+
+<!-- Main navigation item with nested items -->
+
+<li class="md-nav__item">
+  <a href="../getBlockTransactionsByHeight/" class="md-nav__link">
+    Get Block Transactions -  GET /block-transactions_by_Height
   </a>
 </li>
   
@@ -1620,14 +1632,14 @@
 </thead>
 <tbody>
 <tr>
-<td>date</td>
-<td>start date of the range of dates to look up</td>
-<td>1609459200</td>
-</tr>
-<tr>
 <td>filter</td>
 <td>Filter day to display fee chart.</td>
-<td>D</td>
+<td>1D, 5D, 1M, 3M, 6M, 1Y, 3Y, 5Y</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Start date of the range of dates to look up</td>
+<td>1609459200</td>
 </tr>
 </tbody>
 </table>
