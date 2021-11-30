@@ -22,6 +22,7 @@ Returns BOA Holder of the ledger.
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 | Query String | Explanation    | Example                            |
 | ------------ | -------------- | ---------------------------------- |

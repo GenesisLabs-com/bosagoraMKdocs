@@ -23,6 +23,7 @@ Returns Coin market cap.
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 | Query String | Explanation    | Example                            |
 | --------- | ------------ | ------------------------------------ |

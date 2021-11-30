@@ -25,6 +25,7 @@ Returns Block Validator
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p><br/>
 | Query String | Explanation    | Example                            |
 | --------- | ------------ | ------------------------------------ |

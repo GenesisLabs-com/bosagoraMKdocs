@@ -23,6 +23,7 @@ Returns List the total by output address of the pending transaction.
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 | Parameter | Explanation  | Example                              |
 | --------- | ------------ | ------------------------------------ |

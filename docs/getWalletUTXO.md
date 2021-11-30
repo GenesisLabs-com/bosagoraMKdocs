@@ -25,6 +25,7 @@ Returns a set of UTXOs of the address
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 
 | Parameter | Explanation  | Example                              |

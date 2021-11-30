@@ -26,6 +26,7 @@ Returns proposals of the ledger.
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p><br/>
 | Query String | Explanation    | Example                            |
 | --------- | ------------ | ------------------------------------ |

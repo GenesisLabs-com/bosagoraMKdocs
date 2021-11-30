@@ -23,6 +23,7 @@ Return the block height corresponding to the block creation time
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 
 | Query String | Explanation    | Example                            |

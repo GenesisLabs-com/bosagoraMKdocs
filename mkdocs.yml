@@ -7,7 +7,8 @@ nav:
       - Get Block Height/:time- GET /block_height_at/:time: blockHeightat.md
       - Get Block Summary - GET /block-summary: blocksummary.md
       - Get Block Enrollments -  GET /block-enrollments: getBlockEnrollments.md
-      - Get Block Transactions -  GET /block-transactions: getBlockTransactions.md
+      - Get Block Transactions -  GET /block-transactions_by_Hash: getBlockTransactionsByHash.md
+      - Get Block Transactions -  GET /block-transactions_by_Height: getBlockTransactionsByHeight.md
       
   - Validators::
       - Get Validators - GET /validators: getValidators.md 

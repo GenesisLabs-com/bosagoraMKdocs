@@ -26,6 +26,7 @@ If an address was provided, return the validator data of the address if it exist
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 
 | Parameter | Explanation  | Example                              |

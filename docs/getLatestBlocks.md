@@ -4,24 +4,27 @@
 HTTP Method: **GET**
 
 Returns Latest blocks of the ledger.
-<br/><br/>
+<br/>
+<input class="md-input" placeholder="Enter page" id="page" width="100"></input><br/>
+<input class="md-input" placeholder="Enter pageSize" id="pageSize"></input><br/><br/>
 <button class="md-button" onclick="tryNow()">Try Now</button>
 
 <script>
-   document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/latest-blocks?page=1&pageSize=10"
+   document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/latest-blocks?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "10"}`
     function tryNow(){
         document.getElementById("showResult").innerHTML =""
         document.getElementById("endpoint").innerHTML =""
-        fetch("https://dev-stoa-boascan.bosagora.com/latest-blocks?page=1&pageSize=10").then((res) => {
+        fetch(`https://dev-stoa-boascan.bosagora.com/latest-blocks?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "10"}`).then((res) => {
             res.json().then((res) => {
                 document.getElementById("showResult").innerHTML = JSON.stringify(res)
-                document.getElementById("endpoint").innerHTML ="https://dev-stoa-boascan.bosagora.com/latest-blocks?page=1&pageSize=10"
+                document.getElementById("endpoint").innerHTML =`https://dev-stoa-boascan.bosagora.com/latest-blocks?page=${document.getElementById("page").value || "1"}&pageSize=${document.getElementById("pageSize").value || "10"}`
                 })
         }).catch((err) => {
             console.log(err)
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p><br/>
 | Query String | Explanation    | Example                            |
 | ------------ | -------------- | ---------------------------------- |

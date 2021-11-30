@@ -25,6 +25,7 @@ Returns a pending transaction overview.
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 
 | Query String | Explanation    | Example                            |

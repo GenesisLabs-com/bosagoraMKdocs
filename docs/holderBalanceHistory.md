@@ -23,12 +23,13 @@ Returns holder transaction history<br/>
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 
 | Parameter | Explanation  | Example                              |
 | --------- | ------------ | ------------------------------------ |
 | address   | The address of BOA Holder| boa1xzval2a3cdxv28n6slr62wlczslk3juvk7cu05qt3z55ty2rlfqfc6egsh2|
-| filter   | MFilter day to display fee chart.. | D|
+| filter   | Filter day to display fee chart. | 1D, 5D, 1M, 3M, 6M, 1Y, 3Y, 5Y|
 | date   | End date for chart history The number on the page, this value begins with 1. | 1609459200|
 
 Example Response JSON:<br/>

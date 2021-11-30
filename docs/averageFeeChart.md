@@ -26,8 +26,9 @@ Returns average transaction fee between range (date - filter)
 <p id="showResult"></p>
 | Query String | Explanation    | Example                            |
 | ------------ | -------------- | ---------------------------------- |
-| date         | start date of the range of dates to look up | 1609459200 |
-| filter   | Filter day to display fee chart. | D|
+| filter   | Filter day to display fee chart. | 1D, 5D, 1M, 3M, 6M, 1Y, 3Y, 5Y|
+| date         | Start date of the range of dates to look up | 1609459200 |
+
 
 Example Response JSON:<br/>
 {

@@ -24,6 +24,7 @@ Returns a set of transactions details.
         })
     }
 </script>
+<h6>Result</h6>
 <p id="showResult"></p>
 
 
