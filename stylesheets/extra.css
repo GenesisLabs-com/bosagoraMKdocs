@@ -2,6 +2,9 @@
 .md-footer {
   background-color: #004d9a;
 }
+.logo {
+  margin: 0.5rem 0;
+}
 .md-footer-meta {
   display: none
 }
